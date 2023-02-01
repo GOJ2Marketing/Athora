@@ -1,10 +1,11 @@
+/* eslint-disable prettier/prettier */
 import Link from 'next/link';
 import { Helmet } from 'react-helmet';
+import useSite from 'hooks/use-site';
 
 import { getPageByUri, getAllPages, getBreadcrumbsByUri } from 'lib/pages';
 import { WebpageJsonLd } from 'lib/json-ld';
 import { helmetSettingsFromMetadata } from 'lib/site';
-import useSite from 'hooks/use-site';
 import usePageMetadata from 'hooks/use-page-metadata';
 
 import Layout from 'components/Layout';
@@ -14,10 +15,12 @@ import Section from 'components/Section';
 import Container from 'components/Container';
 import FeaturedImage from 'components/FeaturedImage';
 import Breadcrumbs from 'components/Breadcrumbs';
+import Pagination from 'components/Pagination';
+import PostCard from 'components/PostCard';
 
 import styles from 'styles/pages/Page.module.scss';
 
-export default function Page({ page, breadcrumbs }) {
+export default function Page({ page, breadcrumbs, posts, pagination }) {
   const { title, metaTitle, description, slug, content, featuredImage, children } = page;
 
   const { metadata: siteMetadata = {} } = useSite();
@@ -98,6 +101,30 @@ export default function Page({ page, breadcrumbs }) {
             </Container>
           </Section>
         )}
+
+        <Section>
+          <Container>
+            <h2 className="sr-only">Posts</h2>
+            <ul className={styles.posts}>
+              {posts.map((post) => {
+                return (
+                  <li key={post.slug}>
+                    <PostCard post={post} />
+                  </li>
+                );
+              })}
+            </ul>
+            {pagination && (
+              <Pagination
+                addCanonical={false}
+                currentPage={pagination?.currentPage}
+                pagesCount={pagination?.pagesCount}
+                basePath={pagination?.basePath}
+              />
+            )}
+          </Container>
+        </Section>
+
       </Content>
     </Layout>
   );

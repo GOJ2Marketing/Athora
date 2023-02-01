@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import Link from 'next/link';
 import { Helmet } from 'react-helmet';
 
@@ -73,13 +74,6 @@ export default function Post({ post, socialImage, related }) {
       <ArticleJsonLd post={post} siteTitle={siteMetadata.title} />
 
       <Header>
-        {featuredImage && (
-          <FeaturedImage
-            {...featuredImage}
-            src={featuredImage.sourceUrl}
-            dangerouslySetInnerHTML={featuredImage.caption}
-          />
-        )}
         <h1
           className={styles.title}
           dangerouslySetInnerHTML={{
@@ -99,6 +93,13 @@ export default function Post({ post, socialImage, related }) {
       <Content>
         <Section>
           <Container>
+            {featuredImage && (
+              <FeaturedImage
+                {...featuredImage}
+                src={featuredImage.sourceUrl}
+                dangerouslySetInnerHTML={featuredImage.caption}
+              />
+            )}
             <div
               className={styles.content}
               dangerouslySetInnerHTML={{
