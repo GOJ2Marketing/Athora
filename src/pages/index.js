@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import useSite from 'hooks/use-site';
 import { getPaginatedPosts } from 'lib/posts';
 import { WebsiteJsonLd } from 'lib/json-ld';
@@ -10,10 +11,13 @@ import PostCard from 'components/PostCard';
 import Pagination from 'components/Pagination';
 
 import styles from 'styles/pages/Home.module.scss';
+import Button from 'components/Button';
 
 export default function Home({ posts, pagination }) {
   const { metadata = {} } = useSite();
   const { title, description } = metadata;
+
+  console.log({ metadata });
 
   return (
     <Layout>
@@ -21,23 +25,42 @@ export default function Home({ posts, pagination }) {
       <Header>
         <h1
           dangerouslySetInnerHTML={{
-            __html: title,
-          }}
-        />
-
-        <p
-          className={styles.description}
-          dangerouslySetInnerHTML={{
             __html: description,
           }}
         />
+        <Button>Contact Us</Button>
+        <div className={styles.scrollDown}>
+          <p>Scroll</p>
+          <div></div>
+        </div>
       </Header>
+    
+      <Section>
+        <div className={[styles.scrollDown, styles.scrollDownRest].join(' ')}>
+          <div></div>
+        </div>
+
+        <Container>
+          <div class='col-2'>
+            <h2>Who We Are</h2>
+            <p><b>60 years of combined legal experience across 3 generations.</b></p>
+            <p>That’s right; we have longevity. We’re not like your typical lawyers. We’re forward-thinking in 
+              how we operate while retaining the top qualities of a long-standing law firm. We have extensive 
+              experience in a wide variety of practice areas. We are confident that we can guide you to an 
+              amicable solution and you’ll feel cared for every step of the way. That’s our promise.</p>
+          </div>
+          
+          <div class='col-2'>
+          </div>
+        </Container>
+      </Section>
 
       <Section>
         <Container>
           <h2 className="sr-only">Posts</h2>
           <ul className={styles.posts}>
             {posts.map((post) => {
+              console.log(post);
               return (
                 <li key={post.slug}>
                   <PostCard post={post} />

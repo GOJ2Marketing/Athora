@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import Link from 'next/link';
 
 import { postPathBySlug, sanitizeExcerpt } from 'lib/posts';

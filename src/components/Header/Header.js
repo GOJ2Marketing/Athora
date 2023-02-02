@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import Container from 'components/Container';
 
 import styles from './Header.module.scss';

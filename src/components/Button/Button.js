@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import styles from './Button.module.scss';
 
 const Button = ({ children, className, ...rest }) => {

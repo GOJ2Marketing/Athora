@@ -23,3 +23,51 @@
     }
   }
 }
+
+.scrollDown {
+  position: absolute;
+  right: 20%;
+  bottom: 0;
+  padding: 16px 16px 0;
+
+  & > p {
+    writing-mode: tb-rl;
+    color: $cream;
+    margin: 0 0 1em 0;
+    transform: translateX(-50%) rotate(180deg);
+    line-height: 1;
+    position: absolute;
+    bottom: 100%;
+  }
+
+  & > div {
+    width: 3px;
+    height: 100px;
+    background-color: $cream;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 200ms ease-in-out;
+  }
+
+  &:hover {
+    & > div {
+      height: 116px;
+    }
+  }
+}
+
+.scrollDownRest {
+  bottom: auto;
+  top: 0;
+  padding-top: 0;
+
+  & > div {
+    background-color: $purple;
+    height: 170px;
+  }
+
+  &:hover {
+    height: 170px;
+  }
+}

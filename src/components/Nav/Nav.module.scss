@@ -2,13 +2,18 @@
 
 .nav {
   width: 100%;
-  padding: 0 1rem;
+  padding: 0;
   position: fixed;
   top: 0;
   left: 0;
 }
 
 .navSection {
+  margin: 0;
+  padding: 30px 0;
+}
+
+.navContainer {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,7 +21,6 @@
   height: 100%;
   padding-top: 0;
   padding-bottom: 0;
-  margin: 0;
 
   @media (min-width: 480px) {
     justify-content: space-between;
@@ -42,15 +46,18 @@
     font-size: 1.2rem;
     font-weight: bold;
     text-decoration: none;
-    border-bottom: solid 2px transparent;
+    max-width: max(20vw, 200px);
 
     @media (min-width: 480px) {
-      padding: 0.5em;
-      margin-left: -0.5em;
+      padding: 0;
+    }
+
+    svg {
+      max-width: 100%;
     }
 
     &:hover {
-      color: $color-primary;
+      opacity: 0.5;
     }
   }
 }

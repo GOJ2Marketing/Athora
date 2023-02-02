@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 const indexSearch = require('./plugins/search-index');
 const feed = require('./plugins/feed');
 const sitemap = require('./plugins/sitemap');
