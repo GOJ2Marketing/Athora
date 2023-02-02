@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { getApolloClient } from 'lib/apollo-client';
 
 import { updateUserAvatar } from 'lib/users';

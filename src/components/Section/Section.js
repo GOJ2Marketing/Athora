@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import ClassName from 'models/classname';
 
 import styles from './Section.module.scss';

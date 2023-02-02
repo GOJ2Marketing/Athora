@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Helmet } from 'react-helmet';
 
 import { WebpageJsonLd } from 'lib/json-ld';

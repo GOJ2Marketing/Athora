@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { getPaginatedPosts } from 'lib/posts';
 import usePageMetadata from 'hooks/use-page-metadata';
 
