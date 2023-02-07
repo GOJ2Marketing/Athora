@@ -23,6 +23,7 @@
     "@apollo/client": "^3.7.4",
     "date-fns": "^2.29.3",
     "dotenv": "^16.0.3",
+    "framer-motion": "^9.0.2",
     "fuse.js": "^6.6.2",
     "git": "^0.1.5",
     "graphql": "^16.6.0",

@@ -9,6 +9,7 @@ import Section from 'components/Section';
 import Container from 'components/Container';
 import PostCard from 'components/PostCard';
 import Pagination from 'components/Pagination';
+import HoverCard from 'components/HoverCard';
 
 import styles from 'styles/pages/Home.module.scss';
 import Button from 'components/Button';
@@ -54,6 +55,12 @@ export default function Home({ posts, pagination }) {
           </div>
         </Container>
       </Section>
+      
+      <Container>
+        <HoverCard />
+        <HoverCard />
+        <HoverCard />
+      </Container>
 
       <Section>
         <Container>

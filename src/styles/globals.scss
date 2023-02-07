@@ -5,6 +5,17 @@
   box-sizing: border-box;
 }
 
+:root {
+  --dark-purple: #352540;
+  --light-purple: #685a73;
+  --dark-gray: #40403f;
+  --medium-gray: #555455;
+  --light-gray: #d9d7d7;
+  --off-white: #f2f2f2;
+  --dark-cream: #d6d0c0;
+  --light-cream: #e2ddd0;
+}
+
 html,
 body {
   padding: 0;
