@@ -1,0 +1,33 @@
+.subtitleDesk {
+  color: var(--light-cream);
+}
+
+.subtitleMobile {
+  color: var(--dark-purple);
+  display: none;
+}
+
+.cardContainer {
+  padding-top: 0;
+}
+
+.disclaimerContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 150px;
+}
+
+.disclaimer {
+  max-width: 1000px;
+  font-size: 20px;
+  text-align: right;
+}
+
+@media screen and (max-width: 1060px) {
+  .subtitleDesk {
+    display: none;
+  }
+  .subtitleMobile {
+    display: block;
+  }
+}
