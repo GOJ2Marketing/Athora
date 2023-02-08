@@ -7,7 +7,7 @@ const Footer = () => {
     <div className={Style.container}>
       <div className={Style.content}>
         <div className={Style.links}>
-          <a className={Style.logo} href="">
+          <Link className={Style.logo} href="/">
             <svg
               id="Athora_PrimaryLogo_FullColor_SoftLavender__Dark"
               data-name="Athora_PrimaryLogo_FullColor(SoftLavender)_Dark"
@@ -23,13 +23,13 @@ const Footer = () => {
                 transform="translate(-209.58 -326.89)"
               />
             </svg>
-          </a>
+          </Link>
           <div className={Style.linkContainer}>
-            <Link href="">About Us</Link>
-            <Link href="">Areas of Practice</Link>
-            <Link href="">Journal</Link>
+            <Link href="/about">About Us</Link>
+            <Link href="/areas-of-practice">Areas of Practice</Link>
+            <Link href="/resources">Journal</Link>
             <Link href="">My Account</Link>
-            <Link href="">Contact us</Link>
+            <Link href="/contact">Contact us</Link>
           </div>
         </div>
         <div className={Style.infoContainer}>

@@ -19,6 +19,10 @@ const Card = () => {
 
   if (typeof window !== 'undefined') {
     mobileReset = window.innerWidth < 1060;
+    window.addEventListener('resize', () => {
+      mobileReset = window.innerWidth < 1060;
+      console.log(title);
+    });
   }
 
   if (!mobileReset) {
