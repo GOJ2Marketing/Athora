@@ -5,6 +5,17 @@
   box-sizing: border-box;
 }
 
+:root {
+  --dark-purple: #352540;
+  --light-purple: #685a73;
+  --dark-gray: #40403f;
+  --medium-gray: #555455;
+  --light-gray: #d9d7d7;
+  --off-white: #f2f2f2;
+  --dark-cream: #d6d0c0;
+  --light-cream: #e2ddd0;
+}
+
 html,
 body {
   padding: 0;
@@ -16,9 +27,15 @@ body {
   background-size: 100%;
 }
 
+h1,
+h2 {
+  font-family: "Quiche Text W05 Regular";
+}
+
 p {
   line-height: 1.6;
   margin: 1.2em 0;
+  font-family: "Sabon LT W05 Roman";
 }
 
 ul {
@@ -60,3 +77,78 @@ figcaption {
   width: 0;
   height: 0;
 }
+
+// START FONT IMPORTS
+@font-face {
+  font-family: "Sabon LT W05 Roman";
+  src: url("Fonts/5598806/4b0f93d9-e6b8-4607-b4b2-96e6e85763e5.woff2") format("woff2"),
+    url("Fonts/5598806/05d63dd3-212f-40e8-8487-c3f5f7677474.woff") format("woff");
+}
+@font-face {
+  font-family: "Sabon LT W05 Italic";
+  src: url("Fonts/5598830/79d3c724-2f1d-468a-92c5-07710a294431.woff2") format("woff2"),
+    url("Fonts/5598830/cac05180-d4ed-453a-a238-efd640401827.woff") format("woff");
+}
+@font-face {
+  font-family: "Sabon LT W05 Bold";
+  src: url("Fonts/5598851/afb5b002-3b04-47b7-addd-71e7d4fda54e.woff2") format("woff2"),
+    url("Fonts/5598851/dbc952a3-4aeb-4f9e-9ed0-b183ef36658a.woff") format("woff");
+}
+@font-face {
+  font-family: "Sabon LT W05 Bold Italic";
+  src: url("Fonts/5598872/bcc2b85b-c195-49d6-8aee-4b6f58320fc4.woff2") format("woff2"),
+    url("Fonts/5598872/11ec16b7-064d-49f1-8e0f-4868eab5115d.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Quiche Text W05 Light";
+  src: url("Fonts/5793806/0aec52a7-d7de-45af-8266-ce049afe4ac2.woff2") format("woff2"),
+    url("Fonts/5793806/26effa84-dd8a-4b5b-827a-3004d29e4d65.woff") format("woff");
+}
+@font-face {
+  font-family: "Quiche Text W05 Light Italic";
+  src: url("Fonts/5793810/d2050314-4f04-4b62-b4e9-a4937e9ceeb3.woff2") format("woff2"),
+    url("Fonts/5793810/2292be7e-0b0a-4e62-a06c-abec35d6178f.woff") format("woff");
+}
+@font-face {
+  font-family: "Quiche Text W05 Regular";
+  src: url("Fonts/5793814/6d67492b-ee6e-4254-a65c-3043faa46b9b.woff2") format("woff2"),
+    url("Fonts/5793814/0e80f8b4-6ba1-4cf5-b0c5-5b7bfeeebe68.woff") format("woff");
+}
+@font-face {
+  font-family: "Quiche Text W05 Italic";
+  src: url("Fonts/5793819/428796be-8d6e-4062-aeec-81add557dcab.woff2") format("woff2"),
+    url("Fonts/5793819/08f1b86c-4f9e-48ce-b577-5ce34c6ff610.woff") format("woff");
+}
+@font-face {
+  font-family: "Quiche Text W05 Medium";
+  src: url("Fonts/5793823/fa1a9e43-0418-4da3-a697-37feeebedd25.woff2") format("woff2"),
+    url("Fonts/5793823/6ebcb516-fef9-430c-928b-b9e85697084f.woff") format("woff");
+}
+@font-face {
+  font-family: "Quiche Text W05 Medium Italic";
+  src: url("Fonts/5793827/aa46d307-6737-446e-853b-26b0a5c3906a.woff2") format("woff2"),
+    url("Fonts/5793827/344fb010-f29d-4a27-a6ba-4908d2011cbc.woff") format("woff");
+}
+@font-face {
+  font-family: "Quiche Text W05 Bold";
+  src: url("Fonts/5793831/9d506194-4b91-400b-8790-65866be8030c.woff2") format("woff2"),
+    url("Fonts/5793831/74ebcdfc-42fa-451d-b0be-09dfd576d8e4.woff") format("woff");
+}
+@font-face {
+  font-family: "Quiche Text W05 Bold Italic";
+  src: url("Fonts/5793835/977cac75-7c13-43cb-a6fc-4c61277a67a6.woff2") format("woff2"),
+    url("Fonts/5793835/6b4b3bb3-6c9c-42d1-9a2e-82db50bae493.woff") format("woff");
+}
+@font-face {
+  font-family: "Quiche Text W05 ExtraBold";
+  src: url("Fonts/5793839/9b022800-cf1b-4aa3-b29f-76c3debba9c3.woff2") format("woff2"),
+    url("Fonts/5793839/570efc47-2808-4414-94b8-72ee89f1b281.woff") format("woff");
+}
+@font-face {
+  font-family: "Quiche Text W05 ExtraBold It";
+  src: url("Fonts/5793843/02d7679a-b044-4734-837e-cb3c49e523c5.woff2") format("woff2"),
+    url("Fonts/5793843/fc6e43c5-e363-42ba-ae2f-4999af1de6e5.woff") format("woff");
+}
+
+// END FONT IMPORTS

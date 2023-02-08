@@ -1,4 +1,7 @@
-@import "styles/settings/__settings";
+.container * {
+  margin: 0;
+  padding: 0;
+}
 
 .container {
   padding: 50px 0;
@@ -31,6 +34,72 @@
 
 .linkContainer a {
   font-size: 24px;
+  color: #685a73;
+  transition: all 200ms linear;
+  text-decoration: none;
+}
+
+.linkContainer a:hover {
+  color: #e2ddd0;
+  transform: translateX(-5px);
+}
+
+.logo {
+  width: 100%;
+  max-width: 772px;
+  height: 28%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.logo svg {
+  transition: all 200ms linear;
+  width: 100%;
+  height: auto;
+  fill: #685a73;
+}
+
+.logo:hover svg {
+  fill: #e2ddd0;
+  transform: translateX(-5px);
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-bottom: 32px;
+}
+
+.infoContainer p {
+  font-size: 24px;
+  color: #685a73;
+  transition: all 200ms linear;
+  text-align: right;
+}
+
+.info {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.contact {
+  line-height: 44px;
+}
+
+.contact:first-child > p {
+  margin-bottom: 10px;
+}
+
+.address {
+  max-width: 252px;
+  margin-left: 25px;
+  line-height: 44px;
+}
+
+@media screen and (max-width: 980px) {
   color: $lightPurple;
   transition: all 200ms linear;
 }
