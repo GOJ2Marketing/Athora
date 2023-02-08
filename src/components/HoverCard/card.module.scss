@@ -68,3 +68,26 @@
   font-size: 20px;
   color: var(--light-cream);
 }
+
+@media screen and (max-width: 1060px) {
+  .container {
+    height: 206px;
+    margin-bottom: 10px;
+  }
+
+  .titleContainer {
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .title {
+    writing-mode: unset;
+    transform: rotate(0deg);
+    font-size: 1.8em;
+  }
+  .body {
+    display: none !important;
+  }
+}

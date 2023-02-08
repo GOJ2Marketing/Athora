@@ -14,10 +14,19 @@ const Card = () => {
     initial: { top: offSet },
   };
 
-  const title = {
-    rest: { scale: 1, top: 0, right: 0 },
-    hover: { scale: 0.7, top: -350, right: 70 },
-  };
+  let title = {};
+  let mobileReset;
+
+  if (typeof window !== 'undefined') {
+    mobileReset = window.innerWidth < 1060;
+  }
+
+  if (!mobileReset) {
+    title = {
+      rest: { scale: 1, top: 0, right: 0 },
+      hover: { scale: 0.7, top: -350, right: 70 },
+    };
+  }
 
   const body = {
     rest: { y: 50, position: 'absolute', display: 'none' },
