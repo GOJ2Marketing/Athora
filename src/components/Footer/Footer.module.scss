@@ -4,9 +4,9 @@
 }
 
 .container {
-  height: 55vh;
+  padding: 50px 0;
   width: 100%;
-  background-color: #352540;
+  background-color: $purple;
 }
 
 .content {
@@ -100,6 +100,71 @@
 }
 
 @media screen and (max-width: 980px) {
+  color: $lightPurple;
+  transition: all 200ms linear;
+}
+
+.linkContainer a:hover {
+  color: $cream;
+  transform: translateX(-5px);
+}
+
+.logo {
+  display: block;
+  width: 100%;
+  max-width: 772px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  & svg {
+    transition: $anime;
+    width: 100%;
+    height: auto;
+    fill: $lightPurple;
+  }
+
+  & :hover {
+    fill: #e2ddd0;
+    transform: translateX(-5px);
+  }
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-bottom: 32px;
+
+  & p {
+    font-size: 24px;
+    color: #685a73;
+    transition: all 200ms linear;
+    text-align: right;
+  }
+}
+
+.info {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.contact {
+  line-height: 34px;
+}
+
+.contact:first-child > p {
+  margin-bottom: 10px;
+}
+
+.address {
+  max-width: 252px;
+  margin-left: 25px;
+  line-height: 34px;
+}
+
+@media screen and (max-width: 930px) {
   .container {
     height: auto;
     min-height: 55vh;
