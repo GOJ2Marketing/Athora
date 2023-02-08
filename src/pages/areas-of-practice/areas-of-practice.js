@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import useSite from 'hooks/use-site';
 import { WebsiteJsonLd } from 'lib/json-ld';
 
@@ -9,7 +10,7 @@ import CardContainer from 'components/CardContainer';
 import HoverCard from 'components/HoverCard';
 
 import styles from 'styles/pages/Home.module.scss';
-import areas from 'styles/pages/AreasOfPractice.module.scss';
+import areas from './Areas-of-practice.module.scss';
 
 export default function Areas() {
   const { metadata = {} } = useSite();
