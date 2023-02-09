@@ -1,3 +1,20 @@
-.test {
-  color: red;
+@import "styles/settings/__settings";
+
+.head {
+  & h1 {
+    color: $purple;
+    font-size: 5em;
+    font-weight: 500;
+    margin: 35px 0;
+  }
+}
+
+.tabs {
+  display: flex;
+
+  & p {
+    color: $purple;
+    font-weight: 500;
+    margin: 0 50px 0 0;
+  }
 }

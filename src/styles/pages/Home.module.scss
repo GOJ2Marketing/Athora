@@ -76,6 +76,18 @@
 }
 // END HERO STYLES
 
+.sectionTitle {
+  display: flex;
+  justify-content: flex-end;
+  width: 65%;
+
+  & h1 {
+    font-size: 2em;
+    font-weight: 500;
+    color: $lightPurple;
+  }
+}
+
 // BEGIN WHO WE ARE STYLES
 
 .whoWeAre {
@@ -121,3 +133,19 @@
 }
 
 // END WHO WE ARE STYLES
+
+// BEGIN CONTACT STYLES
+
+.contact {
+  display: grid;
+  grid-template-columns: 60% auto;
+  height: 80vh;
+}
+
+.formContainer {
+  background-color: $lightPurple;
+}
+
+.mapContainer {
+  background-color: $color-gray-100;
+}

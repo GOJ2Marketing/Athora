@@ -68,12 +68,28 @@ export default function Home({ posts, pagination }) {
           </div>
         </Container>
       </Section>
-      
-      <CardContainer>
-        <HoverCard />
-        <HoverCard />
-        <HoverCard />
-      </CardContainer>
+      <Section>
+        <Container className={styles.sectionTitle}>
+          <h1>Areas of Practice</h1>
+        </Container>
+        <CardContainer>
+          <HoverCard />
+          <HoverCard />
+          <HoverCard />
+        </CardContainer>
+      </Section>
+
+      <Container className={styles.sectionTitle}>
+        <h1>Contact Us</h1>
+      </Container>
+      <div className={styles.contact}>
+        <div className={styles.formContainer}>
+
+        </div>
+        <div className={styles.mapContainer}>
+
+        </div>
+      </div>
 
       <Section>
         <Container>
