@@ -13,11 +13,11 @@ const Footer = () => {
                         </svg>                    
                     </a></Link>
                     <div className={Style.linkContainer}>
-                        <Link href=''>About Us</Link>
-                        <Link href=''>Areas of Practice</Link>
+                        <Link href='/about'>About Us</Link>
+                        <Link href='/areas-of-practice'>Areas of Practice</Link>
                         <Link href=''>Journal</Link>
                         <Link href=''>My Account</Link>
-                        <Link href=''>Contact us</Link>
+                        <Link href='/contact'>Contact us</Link>
                     </div>
                 </div>
                 <div className={Style.infoContainer}>

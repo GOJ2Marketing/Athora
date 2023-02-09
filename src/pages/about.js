@@ -1,11 +1,11 @@
 import useSite from 'hooks/use-site';
-import { getPaginatedPosts } from 'lib/posts';
 import { WebsiteJsonLd } from 'lib/json-ld';
 
 import Layout from 'components/Layout';
 import Header from 'components/Header';
 import Section from 'components/Section';
 import Container from 'components/Container';
+import CardContainer from 'components/CardContainer';
 import HoverCard from 'components/HoverCard';
 
 import styles from 'styles/pages/Home.module.scss';
@@ -25,6 +25,14 @@ export default function Home() {
             __html: description,
           }}
         />
+        <h1>About Us</h1>
+        <h2>
+          Athora Law Group was born out of the desire to forge a new path and bring law professionals into the 21st
+          century. Times are ever-changing, and you need a law group that can confidently lead the way. To be a
+          professional working with Athora Law Group means we put more emphasis on care for our clients. You’re not just
+          a case to us. We value you, and we are genuinely interested in how we can best serve your needs. And we are
+          going to find the right solution for you!
+        </h2>
         <div className={styles.scrollDown}>
           <p>Scroll</p>
           <div></div>
@@ -46,11 +54,11 @@ export default function Home() {
         </Container>
       </Section>
 
-      <Container>
+      <CardContainer>
         <HoverCard />
         <HoverCard />
         <HoverCard />
-      </Container>
+      </CardContainer>
 
       {/* <Section>
         <Container>
@@ -79,17 +87,17 @@ export default function Home() {
   );
 }
 
-export async function getStaticProps() {
-  const { posts, pagination } = await getPaginatedPosts({
-    queryIncludes: 'archive',
-  });
-  return {
-    props: {
-      posts,
-      pagination: {
-        ...pagination,
-        basePath: '/posts',
-      },
-    },
-  };
-}
+// export async function getStaticProps() {
+//   const { posts, pagination } = await getPaginatedPosts({
+//     queryIncludes: 'archive',
+//   });
+//   return {
+//     props: {
+//       posts,
+//       pagination: {
+//         ...pagination,
+//         basePath: '/posts',
+//       },
+//     },
+//   };
+// }

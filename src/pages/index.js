@@ -7,6 +7,7 @@ import Layout from 'components/Layout';
 import Header from 'components/Header';
 import Section from 'components/Section';
 import Container from 'components/Container';
+import CardContainer from 'components/CardContainer';
 import PostCard from 'components/PostCard';
 import Pagination from 'components/Pagination';
 import HoverCard from 'components/HoverCard';
@@ -56,11 +57,11 @@ export default function Home({ posts, pagination }) {
         </Container>
       </Section>
       
-      <Container>
+      <CardContainer>
         <HoverCard />
         <HoverCard />
         <HoverCard />
-      </Container>
+      </CardContainer>
 
       <Section>
         <Container>
