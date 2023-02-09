@@ -4,15 +4,15 @@ import Style from './card.module.scss';
 import Button from 'components/Button';
 
 const Card = (props) => {
-  const options = [20, 50, 10, 5];
+  const options = [200, 50, 160, 27, 79, 95, 110, 134];
   const random = Math.floor(Math.random() * options.length);
   const offSet = options[random];
   console.log(offSet);
 
-  const card = {
-    view: { top: 0 },
-    initial: { top: offSet },
-  };
+  // const card = {
+  //   view: { top: 0 },
+  //   initial: { top: offSet },
+  // };
 
   let title = {};
   let mobileReset;
@@ -40,10 +40,11 @@ const Card = (props) => {
   return (
     <motion.div
       className={Style.container}
-      initial="initial"
-      whileInView="view"
-      variants={card}
-      viewport={{ once: true }}
+      // initial="initial"
+      // whileInView="view"
+      // variants={card}
+      // viewport={{ once: true }}
+      // transition={{ repeat: Infinity, duration: 7, repeatType: "reverse", ease: "linear" }}
     >
       <div className={Style.background}>
         <img src={props.img} />
