@@ -3,7 +3,7 @@ import Style from './card.module.scss';
 
 import Button from 'components/Button';
 
-const Card = () => {
+const Card = (props) => {
   const options = [20, 50, 10, 5];
   const random = Math.floor(Math.random() * options.length);
   const offSet = options[random];
@@ -33,8 +33,8 @@ const Card = () => {
   }
 
   const body = {
-    rest: { y: 50, position: 'absolute', display: 'none' },
-    hover: { y: 0, position: 'absolute', display: 'flex' },
+    rest: { y: 50, position: 'absolute', opacity: 0 },
+    hover: { y: 0, position: 'absolute', opacity: 1 },
   };
 
   return (
@@ -46,7 +46,7 @@ const Card = () => {
       viewport={{ once: true }}
     >
       <div className={Style.background}>
-        <img src="/businessLaw.png" />
+        <img src={props.img} />
       </div>
       <motion.div className={Style.content} initial="rest" whileHover="hover" animate="rest">
         <motion.div
@@ -59,8 +59,8 @@ const Card = () => {
             stiffness: 100,
           }}
         >
-          <h1 className={Style.title}>Business</h1>
-          <h1 className={Style.title}>Law</h1>
+          <h1 className={Style.title}>{props.title1}</h1>
+          <h1 className={Style.title}>{props.title2}</h1>
         </motion.div>
         <motion.div
           className={Style.body}
@@ -73,11 +73,7 @@ const Card = () => {
           }}
         >
           <motion.div>
-            <p>
-              A business is more than just how you support yourself. We provide guidance for many practice areas, from
-              employment law to specific nuances of business industries. We have extensive experience from beginning to
-              end and can confidently assist you in any business endeavor.
-            </p>
+            <p>{props.desc}</p>
           </motion.div>
           <motion.div>
             <Button>Read More</Button>

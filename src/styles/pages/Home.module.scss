@@ -1,5 +1,12 @@
 @import "styles/settings/__settings";
 
+// BEGIN HERO STYLES
+.heroText {
+  font-weight: 500;
+  margin-bottom: 70px;
+  max-width: 1420px;
+}
+
 .description {
   text-align: center;
   line-height: 1.5;
@@ -66,4 +73,79 @@
     background-color: $purple;
     height: 170px !important;
   }
+}
+// END HERO STYLES
+
+.sectionTitle {
+  display: flex;
+  justify-content: flex-end;
+  width: 65%;
+
+  & h1 {
+    font-size: 2em;
+    font-weight: 500;
+    color: $lightPurple;
+  }
+}
+
+// BEGIN WHO WE ARE STYLES
+
+.whoWeAre {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  color: $lightPurple;
+
+  & h2 {
+    font-family: "Quiche Text W05 Light";
+    font-size: 5em;
+    font-weight: 500;
+    margin: 0;
+  }
+  & h3 {
+    font-size: 2em;
+    font-family: "Quiche Text W05 Regular";
+    font-weight: 500;
+    margin: 0;
+  }
+  & p {
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 28px;
+    margin: 10px 0 0 0;
+  }
+  & b {
+    font-size: 1em;
+    font-weight: 500;
+    font-family: "Sabon LT W05 Bold";
+  }
+}
+
+.practice {
+  display: grid;
+  grid-template-columns: 60% auto;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.states {
+  display: flex;
+  justify-content: space-around;
+}
+
+// END WHO WE ARE STYLES
+
+// BEGIN CONTACT STYLES
+
+.contact {
+  display: grid;
+  grid-template-columns: 60% auto;
+  height: 80vh;
+}
+
+.formContainer {
+  background-color: $lightPurple;
+}
+
+.mapContainer {
+  background-color: $color-gray-100;
 }

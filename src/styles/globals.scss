@@ -1,5 +1,5 @@
 @import "styles/settings/__settings";
-@import "style.css";
+// @import "style.css";
 
 * {
   box-sizing: border-box;
@@ -44,6 +44,7 @@ ul {
 
 a {
   color: $color-primary;
+  text-decoration: none;
 }
 
 img {

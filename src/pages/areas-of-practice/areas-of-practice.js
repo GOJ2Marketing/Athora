@@ -53,9 +53,9 @@ export default function Areas() {
       </Section>
       <Section className={areas.cardContainer}>
         <CardContainer>
-          <HoverCard />
-          <HoverCard />
-          <HoverCard />
+          <HoverCard img="/businessLaw.png" title1="Business" title2="Law" desc="A business is more than just how you support yourself. We provide guidance for many practice areas, from employment law to specific nuances of business industries. We have extensive experience from beginning to end and can confidently assist you in any business endeavor."/>
+          <HoverCard img="/estateLaw.png" title1="Estate Planning &" title2="Administration" desc="Whether you’re looking to protect your assets or decide how you’d like to proceed if you become impaired, Estate Planning encompasses it all. Most people associate estate planning with just a will, but there’s more to do in order to plan for every situation. We are experienced in comprehensive estate planning & administration and can help protect you and your loved ones."/>
+          <HoverCard img="/litigationLaw.png" title1="Commercial" title2="Litigation" desc="Whether you’re looking to protect your assets or decide how you’d like to proceed if you become impaired, Estate Planning encompasses it all. Most people associate estate planning with just a will, but there’s more to do in order to plan for every situation. We are experienced in comprehensive estate planning & administration and can help protect you and your loved ones."/>
         </CardContainer>
         <Container className={areas.disclaimerContainer}>
           <p className={areas.disclaimer}>

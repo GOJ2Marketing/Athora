@@ -7,6 +7,7 @@ import Layout from 'components/Layout';
 import Header from 'components/Header';
 import Section from 'components/Section';
 import Container from 'components/Container';
+import CardContainer from 'components/CardContainer';
 import PostCard from 'components/PostCard';
 import Pagination from 'components/Pagination';
 import HoverCard from 'components/HoverCard';
@@ -29,6 +30,7 @@ export default function Home({ posts, pagination }) {
             __html: description,
           }}
         />
+        <h1 className={styles.heroText}>Leading the Way With Exceptional Legal Guidance</h1>
         <Button>Contact Us</Button>
         <div className={styles.scrollDown}>
           <p>Scroll</p>
@@ -41,26 +43,53 @@ export default function Home({ posts, pagination }) {
           <div></div>
         </div>
 
-        <Container>
-          <div class='col-2'>
+        <Container className={styles.whoWeAre}>
+          <div>
             <h2>Who We Are</h2>
             <p><b>60 years of combined legal experience across 3 generations.</b></p>
             <p>That’s right; we have longevity. We’re not like your typical lawyers. We’re forward-thinking in 
               how we operate while retaining the top qualities of a long-standing law firm. We have extensive 
               experience in a wide variety of practice areas. We are confident that we can guide you to an 
-              amicable solution and you’ll feel cared for every step of the way. That’s our promise.</p>
+              amicable solution and you’ll feel cared for every step of the way. That’s our promise.
+            </p>
+            <div className={styles.practice}>
+              <div>
+                <h3>Where we Practice</h3>
+                <p><b>We represent clients in Indiana and Michigan</b></p>
+              </div>
+              <div className={styles.states}>
+                <p>IN</p>
+                <p>MI</p>
+              </div>
+            </div>
           </div>
           
-          <div class='col-2'>
+          <div className='col-2'>
           </div>
         </Container>
       </Section>
-      
-      <Container>
-        <HoverCard />
-        <HoverCard />
-        <HoverCard />
+      <Section>
+        <Container className={styles.sectionTitle}>
+          <h1>Areas of Practice</h1>
+        </Container>
+        <CardContainer>
+          <HoverCard />
+          <HoverCard />
+          <HoverCard />
+        </CardContainer>
+      </Section>
+
+      <Container className={styles.sectionTitle}>
+        <h1>Contact Us</h1>
       </Container>
+      <div className={styles.contact}>
+        <div className={styles.formContainer}>
+
+        </div>
+        <div className={styles.mapContainer}>
+
+        </div>
+      </div>
 
       <Section>
         <Container>
