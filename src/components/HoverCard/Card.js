@@ -1,18 +1,19 @@
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/router';
 import Style from './card.module.scss';
 
 import Button from 'components/Button';
 
 const Card = (props) => {
-  const options = [20, 50, 10, 5];
+  const options = [200, 50, 160, 27, 79, 95, 110, 134];
   const random = Math.floor(Math.random() * options.length);
   const offSet = options[random];
   console.log(offSet);
 
-  const card = {
-    view: { top: 0 },
-    initial: { top: offSet },
-  };
+  // const card = {
+  //   view: { top: 0 },
+  //   initial: { top: offSet },
+  // };
 
   let title = {};
   let mobileReset;
@@ -37,13 +38,16 @@ const Card = (props) => {
     hover: { y: 0, position: 'absolute', opacity: 1 },
   };
 
+  const router = useRouter();
+
   return (
     <motion.div
       className={Style.container}
-      initial="initial"
-      whileInView="view"
-      variants={card}
-      viewport={{ once: true }}
+      // initial="initial"
+      // whileInView="view"
+      // variants={card}
+      // viewport={{ once: true }}
+      // transition={{ repeat: Infinity, duration: 7, repeatType: "reverse", ease: "linear" }}
     >
       <div className={Style.background}>
         <img src={props.img} />
@@ -72,11 +76,11 @@ const Card = (props) => {
             stiffness: 100,
           }}
         >
-          <motion.div>
+          <motion.div className={router.pathname === '/about' ? Style.position : Style.bodyText}>
             <p>{props.desc}</p>
           </motion.div>
           <motion.div>
-            <Button>Read More</Button>
+            <Button>{props.button}</Button>
           </motion.div>
         </motion.div>
       </motion.div>

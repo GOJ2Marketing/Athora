@@ -149,3 +149,21 @@
 .mapContainer {
   background-color: $color-gray-100;
 }
+
+// END CONTACT STYLES
+
+// BEGIN BLOG SLIDER STYLES
+
+.postContainer {
+  width: 100%;
+  overflow: hidden;
+}
+
+.post {
+  display: flex;
+  list-style: none;
+
+  & li {
+    width: 1000px;
+  }
+}

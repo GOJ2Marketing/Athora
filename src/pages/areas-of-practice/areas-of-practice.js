@@ -14,7 +14,7 @@ import areas from './Areas-of-practice.module.scss';
 
 export default function Areas() {
   const { metadata = {} } = useSite();
-  const { title, description } = metadata;
+  const { title } = metadata;
 
   console.log({ metadata });
 
@@ -22,11 +22,11 @@ export default function Areas() {
     <Layout>
       <WebsiteJsonLd siteTitle={title} />
       <Header>
-        <h1
+        {/* <h1
           dangerouslySetInnerHTML={{
             __html: description,
           }}
-        />
+        /> */}
         <Container>
           <h1>Areas of Practice</h1>
           <p className={areas.subtitleDesk}>
@@ -42,9 +42,6 @@ export default function Areas() {
 
       <Section>
         <Container>
-          <div className={[styles.scrollDown, styles.scrollDownRest].join(' ')}>
-            <div></div>
-          </div>
           <p className={areas.subtitleMobile}>
             Working with our team through any of our practice areas will provide you with unmatched service and care. We
             work together across our practice areas as a team to provide the best results for our clients.
