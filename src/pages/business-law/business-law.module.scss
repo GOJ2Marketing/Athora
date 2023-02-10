@@ -1,0 +1,45 @@
+@import "styles/settings/__settings";
+
+.subtitleDesk {
+  color: $cream;
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 34px;
+  margin-top: 0;
+  max-width: 950px;
+}
+
+.subtitleMobile {
+  color: var(--dark-purple);
+  display: none;
+}
+
+.cardContainer {
+  padding: 150px 0 0 0;
+}
+
+.disclaimerContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 150px;
+  color: $purple;
+}
+
+.disclaimer {
+  max-width: 1000px;
+  font-size: 20px;
+  text-align: right;
+}
+
+@media screen and (max-width: 1060px) {
+  .subtitleDesk {
+    display: none;
+  }
+  .subtitleMobile {
+    display: block;
+    margin: 50px 0;
+  }
+  .disclaimer {
+    text-align: left;
+  }
+}
