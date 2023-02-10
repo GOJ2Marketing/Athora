@@ -12,7 +12,7 @@ import styles from 'styles/pages/Home.module.scss';
 
 export default function Home() {
   const { metadata = {} } = useSite();
-  const { title, description } = metadata;
+  const { title } = metadata;
 
   console.log({ metadata });
 
@@ -20,11 +20,11 @@ export default function Home() {
     <Layout>
       <WebsiteJsonLd siteTitle={title} />
       <Header>
-        <h1
+        {/* <h1
           dangerouslySetInnerHTML={{
             __html: description,
           }}
-        />
+        /> */}
         <h1>About Us</h1>
         <h2>
           Athora Law Group was born out of the desire to forge a new path and bring law professionals into the 21st
@@ -55,9 +55,9 @@ export default function Home() {
       </Section>
 
       <CardContainer>
-        <HoverCard />
-        <HoverCard />
-        <HoverCard />
+        <HoverCard img="/businessLaw.png" title1="Jackie" title2="Homann" desc="Partner" button="View Profile" />
+        <HoverCard img="/businessLaw.png" title1="Jackie" title2="Homann" desc="Partner" button="View Profile" />
+        <HoverCard img="/businessLaw.png" title1="Jackie" title2="Homann" desc="Partner" button="View Profile" />
       </CardContainer>
 
       {/* <Section>

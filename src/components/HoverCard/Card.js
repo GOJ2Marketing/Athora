@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/router';
 import Style from './card.module.scss';
 
 import Button from 'components/Button';
@@ -37,6 +38,8 @@ const Card = (props) => {
     hover: { y: 0, position: 'absolute', opacity: 1 },
   };
 
+  const router = useRouter();
+
   return (
     <motion.div
       className={Style.container}
@@ -73,11 +76,11 @@ const Card = (props) => {
             stiffness: 100,
           }}
         >
-          <motion.div>
+          <motion.div className={router.pathname === '/about' ? Style.position : Style.bodyText}>
             <p>{props.desc}</p>
           </motion.div>
           <motion.div>
-            <Button>Read More</Button>
+            <Button>{props.button}</Button>
           </motion.div>
         </motion.div>
       </motion.div>
