@@ -2,6 +2,7 @@
 import useSite from 'hooks/use-site';
 import { getPaginatedPosts } from 'lib/posts';
 import { WebsiteJsonLd } from 'lib/json-ld';
+import { motion } from 'framer-motion'
 
 import Layout from 'components/Layout';
 import Header from 'components/Header';
@@ -30,7 +31,7 @@ export default function Home({ posts, pagination }) {
             __html: description,
           }}
         />
-        <h1 className={styles.heroText}>Leading the Way With Exceptional Legal Guidance</h1>
+        {/* <h1 className={styles.heroText}>Leading the Way With Exceptional Legal Guidance</h1> */}
         <Button>Contact Us</Button>
         <div className={styles.scrollDown}>
           <p>Scroll</p>
@@ -73,9 +74,9 @@ export default function Home({ posts, pagination }) {
           <h1>Areas of Practice</h1>
         </Container>
         <CardContainer>
-          <HoverCard />
-          <HoverCard />
-          <HoverCard />
+          <HoverCard img="/businessLaw.png" title1="Business" title2="Law" desc="A business is more than just how you support yourself. We provide guidance for many practice areas, from employment law to specific nuances of business industries. We have extensive experience from beginning to end and can confidently assist you in any business endeavor."/>
+          <HoverCard img="/estateLaw.png" title1="Estate Planning &" title2="Administration" desc="Whether you’re looking to protect your assets or decide how you’d like to proceed if you become impaired, Estate Planning encompasses it all. Most people associate estate planning with just a will, but there’s more to do in order to plan for every situation. We are experienced in comprehensive estate planning & administration and can help protect you and your loved ones."/>
+          <HoverCard img="/litigationLaw.png" title1="Commercial" title2="Litigation" desc="Whether you’re looking to protect your assets or decide how you’d like to proceed if you become impaired, Estate Planning encompasses it all. Most people associate estate planning with just a will, but there’s more to do in order to plan for every situation. We are experienced in comprehensive estate planning & administration and can help protect you and your loved ones."/>
         </CardContainer>
       </Section>
 
@@ -92,18 +93,22 @@ export default function Home({ posts, pagination }) {
       </div>
 
       <Section>
-        <Container>
+        <Container className={styles.postContainer}>
           <h2 className="sr-only">Posts</h2>
-          <ul className={styles.posts}>
+          <motion.div className={styles.post}
+            drag="x"
+            dragConstraints={{ right:0 }}
+            dragSnapToOrigin={true}
+            >
             {posts.map((post) => {
               console.log(post);
               return (
-                <li key={post.slug}>
+                <motion.div key={post.slug}>
                   <PostCard post={post} />
-                </li>
+                </motion.div>
               );
             })}
-          </ul>
+          </motion.div>
           {pagination && (
             <Pagination
               addCanonical={false}

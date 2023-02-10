@@ -69,6 +69,13 @@
   color: var(--light-cream);
 }
 
+.position {
+  align-self: flex-start;
+  & p {
+    font-size: 2em;
+  }
+}
+
 @media screen and (max-width: 1060px) {
   .container {
     height: 206px;
