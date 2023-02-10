@@ -31,7 +31,6 @@ export default function Home({ posts, pagination }) {
             __html: description,
           }}
         />
-        {/* <h1 className={styles.heroText}>Leading the Way With Exceptional Legal Guidance</h1> */}
         <Button>Contact Us</Button>
         <div className={styles.scrollDown}>
           <p>Scroll</p>

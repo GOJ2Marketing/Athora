@@ -1,3 +1,14 @@
-.test {
-  color: red;
+@import "styles/settings/__settings";
+
+.contactContainer {
+  background: $lightPurple;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  & .headerText {
+    text-align: center;
+    color: $cream;
+  }
 }
