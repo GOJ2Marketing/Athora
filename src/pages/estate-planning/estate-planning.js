@@ -3,14 +3,16 @@ import useSite from 'hooks/use-site';
 import { WebsiteJsonLd } from 'lib/json-ld';
 
 import Layout from 'components/Layout';
-import Header from 'components/Header';
+import Header from 'components/Practice/PracticeHead';
 import Section from 'components/Section';
 import Container from 'components/Container';
 import CardContainer from 'components/CardContainer';
 import HoverCard from 'components/HoverCard';
 
-import styles from 'styles/pages/Home.module.scss';
-import areas from './Areas-of-practice.module.scss';
+
+import areas from './estate-planning.module.scss';
+
+
 
 export default function Areas() {
   const { metadata = {} } = useSite();
@@ -21,22 +23,7 @@ export default function Areas() {
   return (
     <Layout>
       <WebsiteJsonLd siteTitle={title} />
-      <Header>
-        {/* <h1
-          dangerouslySetInnerHTML={{
-            __html: description,
-          }}
-        /> */}
-          <h1>Areas of Practice</h1>
-          <h2 className={areas.subtitleDesk}>
-            Working with our team through any of our practice areas will provide you with unmatched service and care. We
-            work together across our practice areas as a team to provide the best results for our clients.
-          </h2>
-        <div className={styles.scrollDown}>
-          <p>Scroll</p>
-          <div></div>
-        </div>
-      </Header>
+      <Header title='Estate Planning & Administration' img='/businessLaw.png' desc="Whether you’re looking to protect your assets or decide how you’d like to proceed if you become impaired, Estate Planning encompasses it all. Most people associate estate planning with just a will, but there’s more to do in order to plan for every situation. We can write wills and trusts, coordinate powers of attorney, and appoint a healthcare representative. We are experienced in comprehensive estate planning & administration and can help protect you and your loved ones."/>
         <Container>
           <p className={areas.subtitleMobile}>
             Working with our team through any of our practice areas will provide you with unmatched service and care. We

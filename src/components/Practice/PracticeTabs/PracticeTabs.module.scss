@@ -1,0 +1,83 @@
+@import "styles/settings/__settings";
+
+.container {
+  background-color: #fff;
+  padding-bottom: 150px;
+
+  & h2 {
+    font-size: 2em;
+    font-weight: 500;
+  }
+
+  & svg {
+    width: 100%;
+  }
+}
+
+.tabContainer {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 30% auto;
+  justify-content: start;
+  & button {
+    background: none;
+    color: inherit;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+  }
+}
+
+// .contentContainer {
+//     border-top: 2px solid $purple;
+// }
+
+.tabList {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  & button {
+    display: flex;
+    flex-direction: column;
+  }
+
+  & p {
+    align-self: flex-start;
+    font-size: 1.2em;
+    font-family: "Sabon LT W05 Roman";
+    font-weight: 500;
+    margin: 0 0 25px 0;
+    color: $lightGray;
+  }
+}
+
+.tabTrigger {
+  border-top: 2px solid $lightGray;
+  border-right: none;
+  border-left: none;
+  border-bottom: none;
+  transition: all 200ms linear;
+}
+
+.tabTrigger[data-state="active"] {
+  border-top: 2px solid $purple;
+
+  & p {
+    color: $purple;
+  }
+}
+
+.tabContent {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+
+  & p {
+    width: 90%;
+    align-self: flex-end;
+  }
+}

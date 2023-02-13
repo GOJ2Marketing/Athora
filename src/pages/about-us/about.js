@@ -9,6 +9,7 @@ import CardContainer from 'components/CardContainer';
 import HoverCard from 'components/HoverCard';
 
 import styles from 'styles/pages/Home.module.scss';
+import pageStyles from './About.module.scss';
 
 export default function Home() {
   const { metadata = {} } = useSite();
@@ -26,7 +27,7 @@ export default function Home() {
           }}
         /> */}
         <h1>About Us</h1>
-        <h2>
+        <h2 className={pageStyles.subTitle}>
           Athora Law Group was born out of the desire to forge a new path and bring law professionals into the 21st
           century. Times are ever-changing, and you need a law group that can confidently lead the way. To be a
           professional working with Athora Law Group means we put more emphasis on care for our clients. You’re not just
@@ -39,13 +40,9 @@ export default function Home() {
         </div>
       </Header>
 
-      <Section>
-        <div className={[styles.scrollDown, styles.scrollDownRest].join(' ')}>
-          <div></div>
-        </div>
-
+      <Section className={pageStyles.descContainer}>
         <Container>
-          <div class="col-2">
+          <div>
             <h2>Women Owned. Generationally Diverse.</h2>
             <h2>Deeply Rooted. Future Focused. Devoted Community Pillars.</h2>
           </div>
@@ -56,8 +53,8 @@ export default function Home() {
 
       <CardContainer>
         <HoverCard img="/businessLaw.png" title1="Jackie" title2="Homann" desc="Partner" button="View Profile" />
-        <HoverCard img="/businessLaw.png" title1="Jackie" title2="Homann" desc="Partner" button="View Profile" />
-        <HoverCard img="/businessLaw.png" title1="Jackie" title2="Homann" desc="Partner" button="View Profile" />
+        <HoverCard img="/businessLaw.png" title1="Janet" title2="Horvath" desc="Partner" button="View Profile" />
+        <HoverCard img="/businessLaw.png" title1="Amanda" title2="Zaluckyj" desc="Partner" button="View Profile" />
       </CardContainer>
 
       {/* <Section>
