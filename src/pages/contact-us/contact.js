@@ -1,7 +1,6 @@
 /* eslint-disable prettier/prettier */
 import Container from 'components/Container';
 import Layout from 'components/Layout';
-import Nav from 'components/Nav';
 import Section from 'components/Section';
 import useSite from 'hooks/use-site';
 import { WebsiteJsonLd } from 'lib/json-ld';
@@ -18,7 +17,6 @@ const Contact = () => {
     return ( 
         <Layout>
             <WebsiteJsonLd siteTitle='Contact Us'/>
-            <Nav/>
             <Section className={Style.contactContainer}>
                 <Container className={Style.headerText}>
                     <h1>Contact Us</h1>
