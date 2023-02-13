@@ -1,0 +1,51 @@
+@import "styles/settings/__settings";
+
+.container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 55vh 45vh;
+  align-items: center;
+  background-color: #fff;
+}
+
+.title {
+  background-color: $purple;
+  color: $cream;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  & svg {
+    max-width: 1550px;
+  }
+}
+
+.bodyContent {
+  color: $purple;
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: 60% auto;
+  align-items: center;
+
+  & p {
+    font-size: 24px;
+    font-weight: 400;
+    max-width: 815px;
+  }
+}
+
+.imgContainer {
+  height: 655px;
+  width: 535px;
+  position: relative;
+  justify-self: end;
+  transform: translateY(-10%);
+
+  & img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+  }
+}
