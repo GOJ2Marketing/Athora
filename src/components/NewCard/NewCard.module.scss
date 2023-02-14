@@ -1,0 +1,71 @@
+@import "styles/settings/__settings";
+
+.cardContainer {
+  background-color: $purple;
+  color: $cream;
+  position: relative;
+  flex: 1;
+  min-height: 100vh;
+  padding: 30px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  & .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent
+      linear-gradient(211deg, #685a7340 0%, #54485c58 13%, #39313f72 39%, #372f3d9d 62%, #352e3bcc 99%, #342d3a58 100%)
+      0% 0% no-repeat padding-box;
+  }
+
+  &:hover {
+    & .desc {
+      margin-bottom: 0;
+      opacity: 1;
+      margin-bottom: 16px;
+      transition: all 200ms ease-in-out 0ms, opacity 400ms ease-in-out 0ms;
+    }
+
+    & .button {
+      transform: translateX(0%);
+      opacity: 1;
+      transition: 200ms ease-in-out 200ms;
+    }
+  }
+}
+
+.titleWrapper {
+  position: relative;
+  flex-grow: 1;
+  margin-bottom: 30px;
+  background-color: #000;
+}
+
+.title {
+  color: $cream;
+  writing-mode: sideways-lr;
+  line-height: 1;
+}
+
+.descWrapper {
+  z-index: 1;
+}
+
+.desc {
+  margin-bottom: -100%;
+  opacity: 0;
+  transition: 200ms ease-in-out 200ms;
+}
+
+.button {
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: $anime;
+}

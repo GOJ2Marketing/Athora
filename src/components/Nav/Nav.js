@@ -214,16 +214,13 @@ const Nav = () => {
       } else {
         setNavState({ scrollState: 'scrollingUp' });
       }
-      console.log('scrollState:', navState.scrollState);
       prevY.current = scrollY.current;
     };
-
-    console.log(scrollY);
 
     window.addEventListener('scroll', navScroll);
 
     return () => window.removeEventListener('scroll', navScroll);
-  }, [scrollY, navState]);
+  }, [scrollY, navState, isOpen]);
 
   return (
     <>
@@ -233,10 +230,20 @@ const Nav = () => {
         className={styles.navMenu}
         style={{ pointerEvents: isOpen ? 'all' : 'none' }}
       >
-        {navigation?.map((listItem) => {
-          return <NavListItem key={listItem.id} className={styles.navSubMenu} item={listItem} />;
+        {navigation?.map((listItem, index) => {
+          return (
+            <motion.li
+              key={listItem.id}
+              style={{ opacity: isOpen ? '1' : '0', transition: 'opacity 0.4s ease-in-out' }}
+              animate={{ opacity: isOpen ? '1' : '0' }}
+              transition={{ duration: 0.4, ease: 'easeInOut', delay: isOpen ? index * 0.2 + 0.2 : 0 }}
+            >
+              <NavListItem className={styles.navSubMenu} item={listItem} />
+            </motion.li>
+          );
         })}
       </motion.ul>
+
       <motion.nav
         className={styles.nav}
         initial={{ translateY: '0', backgroundColor: 'rgba(53, 37, 64, 0)' }}
@@ -245,8 +252,9 @@ const Nav = () => {
             ? { translateY: '0%', backgroundColor: 'rgba(53, 37, 64, 0)' }
             : navState.scrollState === 'scrollingDown'
             ? { translateY: isOpen ? '0%' : '-100%', backgroundColor: 'rgba(53, 37, 64, 0)' }
-            : { tranlateY: '0%', backgroundColor: isOpen ? 'rgba(53, 37, 64, 0)' : 'rgba(53, 37, 64, 1)' }
+            : { tranlateY: '0%', backgroundColor: 'rgba(53, 37, 64, 1)' }
         }
+        transition={{ default: { ease: 'linear' } }}
       >
         <Section className={styles.navSection}>
           <Container className={styles.navContainer}>

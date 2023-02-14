@@ -27,6 +27,10 @@ body {
   background-size: 100%;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 h1 {
   font-size: $bigText;
   margin: 0;

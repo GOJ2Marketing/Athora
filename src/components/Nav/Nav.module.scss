@@ -180,7 +180,7 @@
   overflow-x: hidden;
   overflow-y: auto;
   background-color: $purple;
-  padding-top: 200px;
+  padding: 150px 0;
   opacity: 0;
   transition: 1000ms ease-in-out;
   z-index: 999;
@@ -225,8 +225,9 @@
     display: block;
     text-decoration: none;
     color: $color-gray-600;
-    font-size: $bigText;
-    padding: 0.5em;
+    font-family: "Quiche Text W05 Regular";
+    font-size: clamp(36px, 10vw, 140px);
+    padding: 0.1em;
 
     @media (hover: hover) {
       &:hover {
@@ -270,12 +271,12 @@
 
   &:hover {
     & .line1 {
-      width: 50%;
-      left: 50%;
+      width: 60%;
+      left: 40%;
     }
 
     & .line2 {
-      width: 50%;
+      width: 60%;
     }
   }
 }
