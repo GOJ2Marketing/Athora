@@ -1,0 +1,88 @@
+@import "styles/settings/__settings";
+
+.container {
+  background-color: $cream;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  & h1 {
+    font-size: 7em;
+    font-weight: 500;
+    margin: 0 0 50px 0;
+    color: $purple;
+  }
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  & button {
+    background: none;
+    color: inherit;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+    border: none;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
+.accordionRoot {
+  width: 100%;
+}
+
+.accordionItem {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  padding: 2% 2%;
+  border-top: 2px solid $purple;
+  transition: all 200ms linear;
+
+  & h3 {
+    color: $purple;
+  }
+}
+
+.accordionItem[data-state="open"] {
+  background-color: $darkCream;
+}
+
+.accordionContent {
+  overflow: hidden;
+}
+
+.accordionContent[data-state="open"] {
+  animation: slideDown 300ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+.accordionContent[data-state="closed"] {
+  animation: slideUp 300ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+@keyframes slideDown {
+  from {
+    height: 0;
+  }
+  to {
+    height: 200px;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    height: 200px;
+  }
+  to {
+    height: 0;
+  }
+}

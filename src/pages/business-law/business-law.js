@@ -6,6 +6,8 @@ import Layout from 'components/Layout';
 import Header from 'components/Practice/PracticeHead';
 import PracticeTabs from 'components/Practice/PracticeTabs';
 import CTA from 'components/Practice/CTA';
+import PracticeFullImg from 'components/Practice/PracticeFullImg';
+import PracticeFAQ from 'components/Practice/PracticeFAQ';
 
 const industryList = [
   {
@@ -64,6 +66,8 @@ export default function Areas() {
       <PracticeTabs title='Industry Focuses' list={industryList}/>
 
       <CTA />
+      <PracticeFullImg src="/businessImg.png"/>
+      <PracticeFAQ />
     </Layout>
   );
 }
