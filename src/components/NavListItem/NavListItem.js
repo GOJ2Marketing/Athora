@@ -11,7 +11,7 @@ const NavListItem = ({ className, item }) => {
   });
 
   return (
-    <li>
+    <div>
       {!item.path.includes('http') && !item.target && (
         <Link href={item.path}>
           <motion.a
@@ -39,7 +39,7 @@ const NavListItem = ({ className, item }) => {
       )}
 
       {nestedItems.length > 0 && <ul className={className}>{nestedItems}</ul>}
-    </li>
+    </div>
   );
 };
 
