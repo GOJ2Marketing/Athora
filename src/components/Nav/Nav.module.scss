@@ -47,7 +47,7 @@
     font-size: 1.2rem;
     font-weight: bold;
     text-decoration: none;
-    max-width: max(20vw, 200px);
+    max-width: max(18vw, 320px);
 
     @media (min-width: 480px) {
       padding: 0;
@@ -55,6 +55,7 @@
 
     svg {
       max-width: 100%;
+      display: block;
     }
 
     &:hover {
