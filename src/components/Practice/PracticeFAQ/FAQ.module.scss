@@ -32,7 +32,6 @@
     border: none;
     width: 100%;
     display: flex;
-    justify-content: flex-start;
   }
 }
 
@@ -74,15 +73,38 @@
     height: 0;
   }
   to {
-    height: 200px;
+    height: 180px;
   }
 }
 
 @keyframes slideUp {
   from {
-    height: 200px;
+    height: 180px;
   }
   to {
     height: 0;
   }
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.svg {
+  display: flex;
+}
+
+.vert {
+  transform: rotate(90deg);
+  transition: all 200ms linear;
+  transform-box: fill-box;
+  transform-origin: center;
+  position: absolute;
+}
+
+.accordionItem[data-state="open"] .vert {
+  transform: rotate(180deg);
 }
