@@ -25,6 +25,7 @@ body {
   background-image: url(/background-texture-comp.png);
   background-attachment: fixed;
   background-size: 100%;
+  line-height: 1.6;
 }
 
 .overflow-hidden {
@@ -161,3 +162,14 @@ figcaption {
 }
 
 // END FONT IMPORTS
+
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}

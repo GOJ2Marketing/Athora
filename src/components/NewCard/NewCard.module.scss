@@ -5,8 +5,8 @@
   color: $cream;
   position: relative;
   flex: 1;
-  min-height: 100vh;
-  padding: 30px;
+  min-height: 100%;
+  padding: 50px 30px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50%;
@@ -24,48 +24,30 @@
       linear-gradient(211deg, #685a7340 0%, #54485c58 13%, #39313f72 39%, #372f3d9d 62%, #352e3bcc 99%, #342d3a58 100%)
       0% 0% no-repeat padding-box;
   }
-
-  &:hover {
-    & .desc {
-      margin-bottom: 0;
-      opacity: 1;
-      margin-bottom: 16px;
-      transition: all 200ms ease-in-out 0ms, opacity 400ms ease-in-out 0ms;
-    }
-
-    & .button {
-      transform: translateX(0%);
-      opacity: 1;
-      transition: 200ms ease-in-out 200ms;
-    }
-  }
 }
 
 .titleWrapper {
   position: relative;
   flex-grow: 1;
   margin-bottom: 30px;
-  background-color: #000;
+  transform-origin: 0% 0%;
 }
 
 .title {
   color: $cream;
   writing-mode: sideways-lr;
   line-height: 1;
+  font-size: clamp(26px, 5vw, 65px);
+  text-align: right;
 }
 
 .descWrapper {
   z-index: 1;
-}
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 
-.desc {
-  margin-bottom: -100%;
-  opacity: 0;
-  transition: 200ms ease-in-out 200ms;
-}
-
-.button {
-  opacity: 0;
-  transform: translateX(-50%);
-  transition: $anime;
+  & > div {
+    margin-bottom: 30px;
+  }
 }

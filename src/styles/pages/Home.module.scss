@@ -13,6 +13,12 @@
   font-size: 1.5rem;
 }
 
+.noPadTop {
+  & section {
+    padding-top: 0;
+  }
+}
+
 .posts {
   list-style: none;
   padding-left: 0;
@@ -57,9 +63,15 @@
     transition: 200ms ease-in-out;
   }
 
-  &:hover {
-    & > div {
-      height: 116px;
+  & h2 {
+    margin: 0;
+  }
+
+  &.scrollDownLink {
+    &:hover {
+      & > div {
+        height: 116px;
+      }
     }
   }
 }
@@ -70,8 +82,26 @@
   padding-top: 0;
 
   & > div {
-    background-color: $purple;
-    height: 170px !important;
+    background-color: $lightPurple;
+    height: 150px !important;
+  }
+}
+
+.scrollWho {
+  padding-top: 0;
+  bottom: 50px;
+
+  & > div {
+    background-color: $lightPurple;
+    height: 250px;
+  }
+
+  & h2 {
+    position: absolute;
+    bottom: 0;
+    right: 100%;
+    white-space: nowrap;
+    color: $lightPurple;
   }
 }
 // END HERO STYLES
@@ -93,6 +123,7 @@
 .whoWeAre {
   display: grid;
   grid-template-columns: 50% 50%;
+  grid-gap: 6%;
   color: $lightPurple;
 
   & h2 {
@@ -117,6 +148,9 @@
     font-size: 1em;
     font-weight: 500;
     font-family: "Sabon LT W05 Bold";
+  }
+  & .col2 {
+    background: #bbb;
   }
 }
 

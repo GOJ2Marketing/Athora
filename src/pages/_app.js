@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import NextApp from 'next/app';
 
 import { SiteContext, useSiteContext } from 'hooks/use-site';
@@ -13,13 +14,25 @@ import 'styles/globals.scss';
 import 'styles/wordpress.scss';
 import variables from 'styles/_variables.module.scss';
 
-function App({ Component, pageProps = {}, metadata, recentPosts, categories, menus }) {
+function MyApp({ Component, pageProps = {}, metadata, recentPosts, categories, menus }) {
   const site = useSiteContext({
     metadata,
     recentPosts,
     categories,
     menus,
   });
+
+  useEffect(() => {
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth',
+        });
+      });
+    });
+  }, []);
 
   return (
     <SiteContext.Provider value={site}>
@@ -31,7 +44,7 @@ function App({ Component, pageProps = {}, metadata, recentPosts, categories, men
   );
 }
 
-App.getInitialProps = async function (appContext) {
+MyApp.getInitialProps = async function (appContext) {
   const appProps = await NextApp.getInitialProps(appContext);
 
   const { posts: recentPosts } = await getRecentPosts({
@@ -54,4 +67,4 @@ App.getInitialProps = async function (appContext) {
   };
 };
 
-export default App;
+export default MyApp;
