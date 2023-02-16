@@ -1,4 +1,3 @@
-import Container from 'components/Container';
 import * as Accordion from '@radix-ui/react-accordion';
 
 import Style from './FAQ.module.scss';
@@ -7,8 +6,7 @@ const PracticeHead = ({ list }) => {
   return (
     <>
       <div className={Style.container}>
-        <h1>FAQ</h1>
-        <Container className={Style.contentContainer}>
+        <div className={Style.contentContainer}>
           <Accordion.Root className={Style.accordionRoot} type="single" collapsible>
             {list.map((e) => {
               return (
@@ -47,7 +45,7 @@ const PracticeHead = ({ list }) => {
               );
             })}
           </Accordion.Root>
-        </Container>
+        </div>
       </div>
     </>
   );

@@ -1,11 +1,10 @@
 @import "styles/settings/__settings";
 
 .container {
-  background-color: $cream;
+  background-color: none;
   padding: 100px 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 
   & h1 {
@@ -21,6 +20,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  width: 100%;
 
   & button {
     background: none;
@@ -44,17 +44,18 @@
   justify-content: flex-start;
   flex-direction: column;
   width: 100%;
-  padding: 2% 2%;
+  padding: 0 1% 1% 1%;
   border-top: 2px solid $purple;
   transition: all 200ms linear;
 
   & h3 {
     color: $purple;
+    text-align: left;
   }
 }
 
 .accordionItem[data-state="open"] {
-  background-color: $darkCream;
+  background-color: $lightGray;
 }
 
 .accordionContent {

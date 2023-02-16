@@ -45,12 +45,12 @@ const helpList = [
   },
   {
     title: 'Contracts',
-    tab: 'tab2',
+    tab: 'tab3',
     desc: 'combination of contract, commercial, and tort law. With the complexity of warranties, contracts, regulations, and an often-lengthy chain of contractors and sub-contractors, we know that construction law can be confusing. We represent both owners and construction firms, and we are well-versed in mechanics liens, construction defects (owners and contractors), and contractual disputes. We can work with you to clarify this process and get the resolution you need.'
   },
   {
     title: 'Succession Planning',
-    tab: 'tab2',
+    tab: 'tab4',
     desc: 'combination of contract, commercial, and tort law. With the complexity of warranties, contracts, regulations, and an often-lengthy chain of contractors and sub-contractors, we know that construction law can be confusing. We represent both owners and construction firms, and we are well-versed in mechanics liens, construction defects (owners and contractors), and contractual disputes. We can work with you to clarify this process and get the resolution you need.'
   }
 ]
