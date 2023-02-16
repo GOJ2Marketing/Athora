@@ -16,5 +16,10 @@
     color: $purple;
     font-weight: 500;
     margin: 0 50px 0 0;
+    cursor: pointer;
+  }
+
+  & button {
+    all: unset;
   }
 }
