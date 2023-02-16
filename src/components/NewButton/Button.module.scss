@@ -1,0 +1,18 @@
+@import "styles/settings/__settings";
+
+.button {
+  color: $cream;
+  font-family: inherit;
+  font-size: 20px;
+  background-color: transparent;
+  padding: 0.8em 3em 1em;
+  border-radius: $border-radius-small;
+  border: 1px solid;
+  cursor: pointer;
+  transition: 300ms ease-in-out;
+}
+
+.button:hover {
+  color: $purple;
+  background: $cream;
+}
