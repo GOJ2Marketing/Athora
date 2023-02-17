@@ -3,6 +3,7 @@
 .container {
   height: 100vh;
   background-color: $purple;
+  padding-top: 250px;
 }
 
 .contentContainer {
@@ -15,6 +16,7 @@
 .content {
   display: grid;
   grid-template-columns: 60% auto;
+  align-items: center;
 
   & h1 {
     color: $lightPurple;
