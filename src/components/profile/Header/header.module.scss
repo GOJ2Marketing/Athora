@@ -1,9 +1,8 @@
 @import "styles/settings/__settings";
 
 .container {
-  height: 100vh;
   background-color: $purple;
-  padding-top: 250px;
+  padding: 250px 0 150px 0;
 }
 
 .contentContainer {
@@ -32,6 +31,9 @@
 .left {
   & div {
     margin-top: 80px;
+  }
+  & h1 {
+    line-height: 80px;
   }
 }
 
