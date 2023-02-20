@@ -8,12 +8,12 @@ const PracticeHead = ({ list }) => {
       <div className={Style.container}>
         <div className={Style.contentContainer}>
           <Accordion.Root className={Style.accordionRoot} type="single" collapsible>
-            {list.map((e) => {
+            {list.map(({ tab, title, desc }) => {
               return (
-                <Accordion.Item key={e.tab} className={Style.accordionItem} value={e.tab}>
+                <Accordion.Item key={tab} className={Style.accordionItem} value={tab}>
                   <Accordion.Header>
                     <Accordion.Trigger className={Style.trigger}>
-                      <h3>{e.title}</h3>
+                      <h3>{title}</h3>
                       <div className={Style.svg}>
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="3" viewBox="0 0 28 3">
                           <path
@@ -40,7 +40,9 @@ const PracticeHead = ({ list }) => {
                       </div>
                     </Accordion.Trigger>
                   </Accordion.Header>
-                  <Accordion.Content className={Style.accordionContent}>{e.desc}</Accordion.Content>
+                  <Accordion.Content className={Style.accordionContent}>
+                    <div dangerouslySetInnerHTML={{ __html: desc.replace(/\n/g, '<br>') }}></div>
+                  </Accordion.Content>
                 </Accordion.Item>
               );
             })}
