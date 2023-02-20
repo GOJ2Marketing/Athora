@@ -1,7 +1,7 @@
-/* eslint-disable prettier/prettier */
+import Link from 'next/link';
 import styles from './Button.module.scss';
 
-const Button = ({ children, className, ...rest }) => {
+const Button = ({ href, children, className, ...rest }) => {
   let buttonClassName = styles.button;
 
   if (className) {
@@ -9,9 +9,13 @@ const Button = ({ children, className, ...rest }) => {
   }
 
   return (
-    <button {...rest} className={buttonClassName}>
-      {children}
-    </button>
+    <Link href={href ? href : '#'}>
+      <a>
+        <button {...rest} className={buttonClassName}>
+          {children}
+        </button>
+      </a>
+    </Link>
   );
 };
 
