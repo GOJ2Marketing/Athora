@@ -16,46 +16,48 @@ export default function Home() {
   console.log({ metadata });
 
   return (
-    <Layout>
-      <WebsiteJsonLd siteTitle={title} />
-      <Tabs.Root defaultValue="tab1">
-        <Section>
-          <Container className={styles.head}>
-            <h1>FAQs</h1>
-            <Tabs.List>
-              <div className={styles.tabs}>
-                <Tabs.Trigger value="tab1">
-                  <p>All</p>
-                </Tabs.Trigger>
-                <Tabs.Trigger value="tab2">
-                  <p>Business Law</p>
-                </Tabs.Trigger>
-                <Tabs.Trigger value="tab3">
-                  <p>Estate Planning & Administration</p>
-                </Tabs.Trigger>
-                <Tabs.Trigger value="tab4">
-                  <p>Commercial Litigation</p>
-                </Tabs.Trigger>
-              </div>
-            </Tabs.List>
-          </Container>
-          <Container>
-            <Tabs.Content value="tab1">
-              <FAQ list={all} />
-            </Tabs.Content>
-            <Tabs.Content value="tab2">
-              <FAQ list={business} />
-            </Tabs.Content>
-            <Tabs.Content value="tab3">
-              <FAQ list={estate} />
-            </Tabs.Content>
-            <Tabs.Content value="tab4">
-              <FAQ list={litigation} />
-            </Tabs.Content>
-          </Container>
-        </Section>
-      </Tabs.Root>
-    </Layout>
+    <div data-alt-nav="true">
+      <Layout>
+        <WebsiteJsonLd siteTitle={title} />
+        <Tabs.Root defaultValue="tab1">
+          <Section>
+            <Container className={styles.head}>
+              <h1>FAQs</h1>
+              <Tabs.List>
+                <div className={styles.tabs}>
+                  <Tabs.Trigger value="tab1">
+                    <p>All</p>
+                  </Tabs.Trigger>
+                  <Tabs.Trigger value="tab2">
+                    <p>Business Law</p>
+                  </Tabs.Trigger>
+                  <Tabs.Trigger value="tab3">
+                    <p>Estate Planning & Administration</p>
+                  </Tabs.Trigger>
+                  <Tabs.Trigger value="tab4">
+                    <p>Commercial Litigation</p>
+                  </Tabs.Trigger>
+                </div>
+              </Tabs.List>
+            </Container>
+            <Container>
+              <Tabs.Content value="tab1">
+                <FAQ list={all} />
+              </Tabs.Content>
+              <Tabs.Content value="tab2">
+                <FAQ list={business} />
+              </Tabs.Content>
+              <Tabs.Content value="tab3">
+                <FAQ list={estate} />
+              </Tabs.Content>
+              <Tabs.Content value="tab4">
+                <FAQ list={litigation} />
+              </Tabs.Content>
+            </Container>
+          </Section>
+        </Tabs.Root>
+      </Layout>
+    </div>
   );
 }
 
