@@ -52,6 +52,9 @@
     font-weight: bold;
     text-decoration: none;
     max-width: max(18vw, 320px);
+    transform: translateX(-0px);
+    opacity: 1;
+    transition: $anime;
 
     @media (min-width: 480px) {
       padding: 0;
@@ -63,6 +66,7 @@
     }
 
     &:hover {
+      transform: translateX(-5px);
       opacity: 0.5;
     }
   }
