@@ -1,0 +1,60 @@
+@import "styles/settings/__settings";
+
+.container {
+  height: 100vh;
+  background-color: $purple;
+  padding-top: 250px;
+}
+
+.contentContainer {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 60% auto;
+  align-items: center;
+
+  & h1 {
+    color: $lightPurple;
+  }
+
+  & div {
+    color: $cream;
+    font-weight: 500;
+    line-height: 30px;
+  }
+}
+
+.left {
+  & div {
+    margin-top: 80px;
+  }
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.photoContainer {
+  width: 540px;
+  height: 540px;
+  position: relative;
+
+  & img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.social {
+  margin-top: 25px;
+  cursor: pointer;
+}
