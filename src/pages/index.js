@@ -34,7 +34,7 @@ export default function Home({ posts, pagination }) {
               <div></div>
             </div>
           </a>
-          <Button>Contact Us</Button>
+          <Button href="contact-us">Contact Us</Button>
         </Header>
       </Section>
 
