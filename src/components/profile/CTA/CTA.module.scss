@@ -1,0 +1,29 @@
+@import "styles/settings/__settings";
+
+.container {
+  background-color: $purple;
+  padding-bottom: 200px;
+}
+
+.contentContainer {
+  background-color: $purple;
+  border-bottom: 2px solid $cream;
+  padding: 200px 0 50px 0;
+  display: grid;
+  grid-template-columns: 70% auto;
+  align-items: end;
+
+  & button {
+    width: 200px;
+    justify-self: end;
+  }
+
+  & h2 {
+    font-size: 1.85em;
+    font-weight: 500;
+    margin: 0;
+    max-width: 1075px;
+    color: $cream;
+    line-height: 50px;
+  }
+}

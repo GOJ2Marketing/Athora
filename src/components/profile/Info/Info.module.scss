@@ -1,1 +1,75 @@
 @import "styles/settings/__settings";
+
+.container {
+  background-color: $purple;
+}
+
+.contentContainer {
+  border-top: 2px solid $lightPurple;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.list {
+  color: $cream;
+  font-weight: 500;
+  font-family: "Quiche Text W05 Light";
+
+  & h2 {
+    margin: 50px 0 0 0;
+    font-size: 2em;
+    font-weight: 500;
+    color: $lightPurple;
+  }
+
+  & h3 {
+    font-weight: 500;
+    margin: 25px 0 10px 0;
+  }
+}
+
+.subList {
+  list-style-type: none;
+  counter-reset: item;
+  margin: 0;
+
+  & h3 {
+    font-size: 1.1em;
+  }
+  & li:before {
+    display: inline-block;
+    content: counter(item, decimal-leading-zero);
+    counter-increment: item;
+    width: 2em;
+    margin-left: -2em;
+    color: $lightPurple;
+    font-size: 0.8em;
+  }
+}
+
+.columns {
+  list-style-type: none;
+  counter-reset: item;
+  font-weight: 500;
+  font-family: "Quiche Text W05 Light";
+  margin: 0;
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  column-gap: 30px;
+  -webkit-column-gap: 30px;
+  -moz-column-gap: 30px;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+
+  & li:before {
+    display: inline-block;
+    content: counter(item, decimal-leading-zero);
+    counter-increment: item;
+    width: 2em;
+    margin-left: -2em;
+    color: $lightPurple;
+    font-size: 0.8em;
+  }
+}
