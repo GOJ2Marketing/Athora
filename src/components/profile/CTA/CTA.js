@@ -7,7 +7,7 @@ const CTA = ({ text }) => {
     <div className={Style.container}>
       <Container className={Style.contentContainer}>
         <h2>{text}</h2>
-        <Button>Contact Us</Button>
+        <Button href="/contact-us">Contact Us</Button>
       </Container>
     </div>
   );
