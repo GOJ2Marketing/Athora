@@ -9,11 +9,9 @@ import FAQ from 'components/FAQ';
 
 import styles from './Faq.module.scss';
 
-export default function Home() {
+export default function Home({ faqs }) {
   const { metadata = {} } = useSite();
   const { title } = metadata;
-
-  console.log({ metadata });
 
   return (
     <div data-alt-nav="true">
@@ -53,6 +51,16 @@ export default function Home() {
               <Tabs.Content value="tab4">
                 <FAQ list={litigation} />
               </Tabs.Content>
+              {faqs ? (
+                faqs.map((faq) => (
+                  <Tabs.Content key={faq.id} value="tab1">
+                    <h2>{faq.title.rendered}</h2>
+                    <div dangerouslySetInnerHTML={{ __html: faq.content.rendered }} />
+                  </Tabs.Content>
+                ))
+              ) : (
+                <li>Loading...</li>
+              )}
             </Container>
           </Section>
         </Tabs.Root>
