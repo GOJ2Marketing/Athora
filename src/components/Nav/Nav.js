@@ -13,9 +13,7 @@ import NavListItem from 'components/NavListItem';
 import Container from 'components/Container';
 
 const Nav = () => {
-  const { metadata = {}, menus } = useSite();
-  const { title } = metadata;
-  console.log(title);
+  const { menus } = useSite();
 
   const navigationLocation = process.env.WORDPRESS_MENU_LOCATION_NAVIGATION || MENU_LOCATION_NAVIGATION_DEFAULT;
   const navigation = findMenuByLocation(menus, navigationLocation);

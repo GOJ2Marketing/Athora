@@ -1,6 +1,5 @@
 import useSite from 'hooks/use-site';
 import { WebsiteJsonLd } from 'lib/json-ld';
-import { getPaginatedPosts } from 'lib/posts';
 
 import Layout from 'components/Layout';
 import Header from 'components/Header';
@@ -12,11 +11,9 @@ import Button from 'components/Button';
 import BlogSlider from 'components/BlogSlider';
 import NewCardContainer from 'components/NewCardContainer';
 
-export default function Home({ posts, pagination }) {
+export default function Home({ posts }) {
   const { metadata = {} } = useSite();
   const { title, description } = metadata;
-
-  console.log({ metadata });
 
   return (
     <Layout>
@@ -92,22 +89,29 @@ export default function Home({ posts, pagination }) {
         <div className={styles.mapContainer}></div>
       </div>
 
-      <BlogSlider posts={posts} pagination={pagination} />
+      <BlogSlider posts={posts} />
     </Layout>
   );
 }
 
 export async function getStaticProps() {
-  const { posts, pagination } = await getPaginatedPosts({
-    queryIncludes: 'archive',
-  });
-  return {
-    props: {
-      posts,
-      pagination: {
-        ...pagination,
-        basePath: '/posts',
+  try {
+    const res = await fetch('https://athorastg.wpengine.com/wp-json/wp/v2/posts?per_page=10');
+    console.log('Response status:', res.status);
+    const posts = await res.json();
+    console.log('FAQs data:', posts);
+
+    return {
+      props: {
+        posts,
       },
-    },
-  };
+    };
+  } catch (error) {
+    console.log('Error fetching FAQs:', error);
+    return {
+      props: {
+        posts: [],
+      },
+    };
+  }
 }

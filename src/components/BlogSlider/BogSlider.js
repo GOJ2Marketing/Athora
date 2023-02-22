@@ -1,45 +1,48 @@
-import { motion } from 'framer-motion';
-import PostCard from 'components/PostCard';
-import Pagination from 'components/Pagination';
 import Section from 'components/Section';
-import Container from 'components/Container';
 import styles from './BlogSlider.module.scss';
+import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
+import '@splidejs/react-splide/css';
+import Button from 'components/Button';
 
-const BlogSlider = ({ posts, pagination }) => {
+const BlogSlider = ({ posts }) => {
   return (
     <Section>
-      <Container>
-        <h2 className="sr-only">Posts</h2>
-        <motion.div
-          className={styles.postWrapper}
-          drag="x"
-          dragConstraints={{ left: 0, right: 0 }}
-          dragElastic={0.2}
-          dragTransition={{ power: 0, timeConstant: 250, modifyTarget: (target) => Math.round(target) }}
-        >
+      <h2 className="sr-only">Posts</h2>
+      <Splide
+        hasTrack={false}
+        className={styles.postWrapper}
+        options={{
+          type: 'loop',
+          autoplay: true,
+          interval: 10000,
+          padding: { left: '15%', right: '15%' },
+          gap: '8%',
+          focus: 'center',
+        }}
+      >
+        <SplideTrack>
           {posts.map((post) => {
             console.log(post);
             return (
-              <motion.div
+              <SplideSlide
                 className={styles.post}
-                key={post.slug}
+                key={post.id}
                 style={{ display: 'inline-block', marginRight: '1rem' }}
               >
-                <PostCard post={post} />
-              </motion.div>
+                <div>{post.title.rendered}</div>
+                <div dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }} />
+                <div className={styles.buttonWrapper}>
+                  <Button href={post.link}>Read More</Button>
+                </div>
+              </SplideSlide>
             );
           })}
-        </motion.div>
+        </SplideTrack>
 
-        {pagination && (
-          <Pagination
-            addCanonical={false}
-            currentPage={pagination?.currentPage}
-            pagesCount={pagination?.pagesCount}
-            basePath={pagination?.basePath}
-          />
-        )}
-      </Container>
+        <div className={['splide__progress', styles.progress].join(' ')}>
+          <div className="splide__progress__bar" />
+        </div>
+      </Splide>
     </Section>
   );
 };
