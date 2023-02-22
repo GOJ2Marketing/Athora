@@ -5,8 +5,9 @@ import Layout from 'components/Layout';
 import Header from 'components/Header';
 import Section from 'components/Section';
 import Container from 'components/Container';
-import CardContainer from 'components/CardContainer';
-import HoverCard from 'components/HoverCard';
+// import CardContainer from 'components/CardContainer';
+// import HoverCard from 'components/HoverCard';
+import LawyerCardContainer from 'components/LawyerCardContainer';
 
 import styles from 'styles/pages/Home.module.scss';
 import pageStyles from './About.module.scss';
@@ -51,11 +52,13 @@ export default function Home() {
         </Container>
       </Section>
 
-      <CardContainer>
+      {/* <CardContainer>
         <HoverCard img="/businessLaw.png" title1="Jackie" title2="Homann" desc="Partner" button="View Profile" />
         <HoverCard img="/businessLaw.png" title1="Janet" title2="Horvath" desc="Partner" button="View Profile" />
         <HoverCard img="/businessLaw.png" title1="Amanda" title2="Zaluckyj" desc="Partner" button="View Profile" />
-      </CardContainer>
+      </CardContainer> */}
+
+      <LawyerCardContainer />
 
       {/* <Section>
         <Container>

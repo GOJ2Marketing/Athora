@@ -1,0 +1,26 @@
+@import "styles/settings/__settings";
+
+.cardContainer {
+  display: grid;
+  grid-template-columns: 33.333% 33.333% 33.333%;
+  grid-template-rows: 75vh;
+
+  @media (max-width: 1000px) {
+    display: block;
+  }
+}
+
+.container {
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+}
+
+@media screen and (max-width: 1060px) {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
