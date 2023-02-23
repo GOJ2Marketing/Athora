@@ -60,3 +60,28 @@
   margin-top: 25px;
   cursor: pointer;
 }
+
+@media screen and (max-width: 1380px) {
+  .content {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+
+  .right {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .photoContainer {
+    width: 340px;
+    height: 340px;
+    position: relative;
+  }
+
+  .right {
+    margin-bottom: 20px;
+    align-items: flex-start;
+  }
+}

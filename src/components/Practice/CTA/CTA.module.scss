@@ -19,3 +19,19 @@
     margin-left: 50px;
   }
 }
+
+@media screen and (max-width: 590px) {
+  .contentContainer {
+    flex-direction: column;
+    justify-content: center;
+
+    & h2 {
+      font-size: 1.5em;
+      text-align: center;
+    }
+
+    & button {
+      margin: 20px 0 0 0;
+    }
+  }
+}

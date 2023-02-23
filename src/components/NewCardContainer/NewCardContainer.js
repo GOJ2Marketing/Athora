@@ -54,9 +54,8 @@ const Container = ({ className }) => {
         <NewCard
           title={'Business\nLaw'}
           source={'/businessLaw.png'}
-          desc="A business is more than just how you support yourself. We provide guidance for many practice areas, 
-                from employment law to specific nuances of business industries. We have extensive experience from beginning
-                  to end and can confidently assist you in any business endeavor."
+          desc="A business is more than just how you support yourself. And business present all sorts of challenges.  We’ve helped our clients navigate the tricky landscape of business management.  aiding clients from local mom-and-pops all the way to multi-million-dollar corporations.
+          You can rely on our objectivity, problem-solving mindset, and personalized approach to ensure your business comes out on top."
           href="/business-law"
           buttonText="Read More"
         />
@@ -65,9 +64,7 @@ const Container = ({ className }) => {
         <NewCard
           title={'Estate Planning &\nAdministration'}
           source={'/estateLaw.png'}
-          desc="A business is more than just how you support yourself. We provide guidance for many practice areas, 
-                from employment law to specific nuances of business industries. We have extensive experience from beginning
-                to end and can confidently assist you in any business endeavor."
+          desc="Whether you’re looking to protect your assets or decide how you’d like to proceed if you become impaired, Estate Planning encompasses it all. We also help streamline your plan's administration when it is time to use it. Athora is experienced in comprehensive estate planning & administration and can help protect you and your loved ones."
           href="/estate-planning/"
           buttonText="Read More"
         />
@@ -76,9 +73,7 @@ const Container = ({ className }) => {
         <NewCard
           title={'Commerecial\nLitigation'}
           source={'/litigationLaw.png'}
-          desc="A business is more than just how you support yourself. We provide guidance for many practice areas, 
-                        from employment law to specific nuances of business industries. We have extensive experience from beginning
-                         to end and can confidently assist you in any business endeavor."
+          desc="Litigation is often a last resort, but when it can’t be avoided, we work with our commercial clients to manage risks and find the most cost-effective approach to resolving business disputes. Athora’s litigation lawyers have years of experience handling complex, multi-party litigation. Our goal is to get to the bottom of the  issue, avoid lengthy litigation, minimize business disruption, and conclude your case creatively and quickly."
           href="/commercial-litigation"
           buttonText="Read More"
         />

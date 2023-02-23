@@ -7,6 +7,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100vw;
 
   & h1 {
     font-size: 7em;
@@ -107,4 +108,12 @@
 
 .accordionItem[data-state="open"] .vert {
   transform: rotate(180deg);
+}
+
+@media screen and (max-width: 480px) {
+  .trigger {
+    & h3 {
+      font-size: 0.9em;
+    }
+  }
 }
