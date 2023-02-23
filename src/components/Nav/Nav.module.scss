@@ -93,6 +93,10 @@
   transition: 1000ms ease-in-out;
   z-index: 999;
 
+  @media screen and (max-width: 480px) {
+    padding: 200px 0 200px 0;
+  }
+
   li {
     position: relative;
     z-index: 1;

@@ -18,3 +18,14 @@
     margin: 0;
   }
 }
+
+// MEDIA QUERIES
+
+@media screen and (max-width: 635px) {
+  .descContainer {
+    & h2 {
+      font-size: 1em;
+      line-height: 25px;
+    }
+  }
+}

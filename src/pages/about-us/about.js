@@ -29,11 +29,11 @@ export default function Home() {
         /> */}
         <h1>About Us</h1>
         <h2 className={pageStyles.subTitle}>
-          Athora Law Group was born out of the desire to forge a new path and bring law professionals into the 21st
-          century. Times are ever-changing, and you need a law group that can confidently lead the way. To be a
-          professional working with Athora Law Group means we put more emphasis on care for our clients. You’re not just
-          a case to us. We value you, and we are genuinely interested in how we can best serve your needs. And we are
-          going to find the right solution for you!
+          Athora Law Group was born out of the desire to forge a new path, by women who understand that your legal needs
+          impact your life–personal and professional. Times are changing; you need a law group that can confidently lead
+          the way. At Athora Law Group we emphasize advocacy for you, your family and your business. You’re not just
+          another client. We value you and are genuinely interested in how we can best serve your needs. Together, we
+          are going to find the right solution for you!
         </h2>
         <div className={styles.scrollDown}>
           <p>Scroll</p>

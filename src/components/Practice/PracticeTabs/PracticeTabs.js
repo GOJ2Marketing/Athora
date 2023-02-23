@@ -36,7 +36,7 @@ const PracticeTabs = (props) => {
             {props.list.map((e) => {
               return (
                 <Tabs.Content key={e.tab} value={e.tab} className={Style.tabContent}>
-                  <p>{e.desc}</p>
+                  <p dangerouslySetInnerHTML={{ __html: e.desc.replace(/\n/g, '<br>') }}></p>
                 </Tabs.Content>
               );
             })}

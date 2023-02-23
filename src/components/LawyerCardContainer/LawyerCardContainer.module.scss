@@ -2,8 +2,7 @@
 
 .cardContainer {
   display: grid;
-  grid-template-columns: 33.333% 33.333% 33.333%;
-  grid-template-rows: 75vh;
+  grid-template-columns: repeat(3, 1fr);
 
   @media (max-width: 1000px) {
     display: block;

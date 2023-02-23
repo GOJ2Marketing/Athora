@@ -42,7 +42,9 @@ const PracticeHead = ({ list }) => {
                       </div>
                     </Accordion.Trigger>
                   </Accordion.Header>
-                  <Accordion.Content className={Style.accordionContent}>{e.desc}</Accordion.Content>
+                  <Accordion.Content className={Style.accordionContent}>
+                    <div dangerouslySetInnerHTML={{ __html: e.desc.replace(/\n/g, '<br>') }}></div>
+                  </Accordion.Content>
                 </Accordion.Item>
               );
             })}

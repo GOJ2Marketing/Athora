@@ -3,6 +3,7 @@
 .container {
   background-color: #fff;
   padding-bottom: 150px;
+  width: 100vw;
 
   & h2 {
     font-size: 2em;
@@ -80,5 +81,18 @@
   & p {
     width: 90%;
     align-self: flex-end;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .tabContainer {
+    grid-template-columns: 100%;
+    width: 100%;
+  }
+
+  .tabContent {
+    & p {
+      align-self: flex-start;
+    }
   }
 }

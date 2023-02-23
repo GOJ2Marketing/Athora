@@ -1,23 +1,22 @@
 @import "styles/settings/__settings";
 
 .container {
-  min-height: 100vh;
   display: grid;
-  grid-template-rows: 55vh 45vh;
   align-items: center;
   background-color: #fff;
+  width: 100vw;
 }
 
 .title {
   background-color: $purple;
   color: $cream;
-  min-height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 25vh 0;
 
-  & svg {
-    max-width: 1550px;
+  & h1 {
+    border-top: 6px solid $cream;
   }
 }
 
@@ -32,6 +31,7 @@
     font-size: 24px;
     font-weight: 400;
     max-width: 815px;
+    margin: 0 35px 0 0;
   }
 }
 
@@ -47,5 +47,45 @@
     object-position: center;
     width: 100%;
     height: 100%;
+  }
+}
+
+// MEDIA QUERIES
+
+@media screen and (max-width: 1420px) {
+  .bodyContent {
+    display: flex;
+    flex-direction: column-reverse;
+
+    & p {
+      transform: translateY(-25%);
+    }
+  }
+  .imgContainer {
+    align-self: flex-end;
+    transform: translateY(-30%);
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .title {
+    & h1 {
+      border-top: 3px solid $cream;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .imgContainer {
+    width: 276px;
+    height: 373px;
+    align-self: flex-end;
+    transform: translateY(-40%);
+  }
+  .bodyContent {
+    & p {
+      font-size: 1em;
+      transform: translateY(-5%);
+    }
   }
 }

@@ -52,7 +52,7 @@ const Container = ({ className }) => {
     >
       <motion.div variants={item}>
         <NewCard
-          title={'Jackie\nHomann'}
+          title={'Jackie Sells\nHomann'}
           source={'/businessLaw.png'}
           desc="Partner"
           href="/profile/jackie-homann"
@@ -61,7 +61,7 @@ const Container = ({ className }) => {
       </motion.div>
       <motion.div variants={item}>
         <NewCard
-          title={'Janet\nHorvath'}
+          title={'Janet G.\nHorvath'}
           source={'/estateLaw.png'}
           desc="Partner"
           href="/profile/janet-g-horvath"
@@ -70,7 +70,7 @@ const Container = ({ className }) => {
       </motion.div>
       <motion.div variants={item}>
         <NewCard
-          title={'Amanda\nZaluckyj'}
+          title={'Amanda\n N. Zaluckyj'}
           source={'/litigationLaw.png'}
           desc="Partner"
           href="/profile/amanda-n-zaluckyj"
