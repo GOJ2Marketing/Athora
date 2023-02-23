@@ -1,31 +1,133 @@
 @import "styles/settings/__settings";
 
-.head {
-  & h1 {
-    color: $purple;
-    font-size: 5em;
-    font-weight: 500;
-    margin: 35px 0;
-  }
+.accordionRoot {
+  width: 100%;
 }
 
-.tabs {
-  display: flex;
+.title {
+  margin-top: 50px;
+}
 
-  & p {
-    color: $purple;
-    font-weight: 500;
-    margin: 0 50px 0 0;
-    cursor: pointer;
-  }
+.filterButtons {
+  padding: 50px 0;
 
   & button {
-    all: unset;
+    background-color: transparent;
+    border: none;
+    font-family: "Sabon LT W05 Roman";
+    font-size: 20px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    text-align: left;
+
+    &.active {
+      text-decoration: underline;
+      text-shadow: 0.5px 0.5px 0 $lightPurple;
+    }
   }
 }
 
-.tabTrigger[data-state="active"] p {
-  text-decoration: underline;
-  text-decoration-thickness: 3px;
-  text-underline-offset: 3px;
+.accordionItem {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  border-top: 2px solid $purple;
+  transition: all 200ms linear;
+
+  & h3 {
+    color: $purple;
+    text-align: left;
+    padding: 50px 16px;
+    margin: 0;
+    font-size: 24px;
+    font-family: "Quiche Text W05 Regular";
+    transition: 300ms cubic-bezier(0.87, 0, 0.13, 1);
+  }
+
+  & .header {
+    margin: 0;
+    padding: 0;
+
+    & button {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+    }
+  }
+
+  & .accordionContent {
+    overflow: hidden;
+    padding-top: 0;
+
+    & > * {
+      margin: 0;
+      padding-left: 16px;
+      padding-right: 16px;
+      padding-bottom: 50px;
+    }
+
+    & p {
+      margin: 0;
+    }
+  }
+
+  & .accordionContent[data-state="open"] {
+    animation: slideDown 300ms cubic-bezier(0.87, 0, 0.13, 1);
+  }
+  & .accordionContent[data-state="closed"] {
+    animation: slideUp 300ms cubic-bezier(0.87, 0, 0.13, 1);
+  }
+
+  &[data-state="open"] {
+    background-color: $lightGray;
+
+    & h3 {
+      padding-bottom: 16px;
+    }
+  }
+}
+
+@keyframes slideDown {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.svg {
+  display: flex;
+  margin-right: 16px;
+}
+
+.vert {
+  transform: rotate(90deg);
+  transition: all 200ms linear;
+  transform-box: fill-box;
+  transform-origin: center;
+  position: absolute;
+}
+
+.accordionItem[data-state="open"] .vert {
+  transform: rotate(180deg);
 }

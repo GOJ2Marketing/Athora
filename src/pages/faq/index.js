@@ -2,14 +2,27 @@ export { default } from './faq';
 
 export async function getStaticProps() {
   try {
-    const res = await fetch('https://athorastg.wpengine.com/wp-json/wp/v2/faqs');
-    console.log('Response status:', res.status);
-    const faqs = await res.json();
-    console.log('FAQs data:', faqs);
+    const [faqResponse, categoryResponse] = await Promise.all([
+      fetch('https://athorastg.wpengine.com/wp-json/wp/v2/faqs'),
+      fetch('https://athorastg.wpengine.com/wp-json/wp/v2/categories'),
+    ]);
+
+    const faqs = await faqResponse.json();
+    const categories = await categoryResponse.json().then((cats) => {
+      return cats.reduce((obj, cat) => {
+        obj[cat.id] = cat.name;
+        return obj;
+      }, {});
+    });
+
+    const faqsWithCategories = faqs.map((faq) => {
+      const categoryNames = faq.categories.map((categoryId) => categories[categoryId]);
+      return { ...faq, categoryNames };
+    });
 
     return {
       props: {
-        faqs,
+        faqs: faqsWithCategories,
       },
     };
   } catch (error) {
