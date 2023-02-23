@@ -73,3 +73,29 @@
     font-size: 0.8em;
   }
 }
+
+@media screen and (max-width: 900px) {
+  .columns {
+    column-count: 1;
+  }
+
+  .container {
+    & li {
+      font-size: 0.8em;
+      margin-right: 10px;
+    }
+    & h2 {
+      font-size: 1.1em;
+    }
+    & h3 {
+      font-size: 0.8em;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contentContainer {
+    display: flex;
+    flex-direction: column;
+  }
+}
