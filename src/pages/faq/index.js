@@ -3,7 +3,7 @@ export { default } from './faq';
 export async function getStaticProps() {
   try {
     const [faqResponse, categoryResponse] = await Promise.all([
-      fetch('https://athorastg.wpengine.com/wp-json/wp/v2/faqs'),
+      fetch('https://athorastg.wpengine.com/wp-json/wp/v2/faqs?per_page=100'),
       fetch('https://athorastg.wpengine.com/wp-json/wp/v2/categories'),
     ]);
 
