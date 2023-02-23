@@ -9,6 +9,15 @@
   width: 100%;
 }
 
+.splideWrap {
+  & ul[color="purple"] button {
+    background-color: $lightPurple;
+  }
+  & ul[color="purple"] button:global(.is-active) {
+    background-color: $purple;
+  }
+}
+
 .post {
   background-color: $lightPurple;
   padding: 6% 6%;
@@ -17,6 +26,11 @@
   display: flex !important;
   flex-direction: column;
   justify-content: flex-end;
+
+  & h3,
+  & p {
+    margin: 0 0 16px;
+  }
 }
 
 .buttonWrapper {
