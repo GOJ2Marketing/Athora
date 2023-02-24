@@ -1,0 +1,77 @@
+@import "styles/settings/__settings";
+
+.wrapper {
+  color: $cream;
+
+  & .title {
+    color: $purple;
+    font-family: "Quiche Text W05 Regular";
+  }
+
+  & .postContainer {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 50px;
+
+    & .post {
+      max-width: 44%;
+      margin-bottom: 6%;
+
+      &:nth-child(2n + 1) {
+        margin-right: 6%;
+      }
+
+      & .titleWrap {
+        border-top: 3px solid $purple;
+        margin-top: 16px;
+        padding: 8px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        color: $purple;
+
+        & h2 {
+          margin: 0;
+          margin-right: 16px;
+          line-height: 1.2;
+          font-size: 28px;
+        }
+
+        & p {
+          margin: 0;
+          line-height: 1.2;
+        }
+      }
+
+      & .excerpt {
+        background-color: $lightPurple;
+        padding: 30px;
+        min-height: 423px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        & p {
+          margin: 0 0 16px 0;
+        }
+
+        & .buttonWrapper {
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .wrapper {
+    & .postContainer {
+      & .post {
+        margin-right: 0 !important;
+        max-width: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
