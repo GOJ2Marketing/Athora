@@ -16,3 +16,45 @@
 .cardContainer {
   display: flex;
 }
+
+.form {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & button {
+    font-family: "Sabon LT W05 Roman";
+    font-size: 1em;
+    color: $cream;
+    background: none;
+    border: 1px solid $cream;
+    border-radius: 10px;
+    padding: 15px 70px;
+    margin-top: 50px;
+    cursor: pointer;
+    transition: all 200ms linear;
+  }
+
+  & button:hover {
+    background-color: $cream;
+    color: $purple;
+  }
+}
+
+.formItem {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 15px;
+  & label {
+    font-size: 1.1em;
+    color: $cream;
+  }
+
+  & input {
+    all: unset;
+    border-bottom: 2px solid $cream;
+    color: $cream;
+  }
+}

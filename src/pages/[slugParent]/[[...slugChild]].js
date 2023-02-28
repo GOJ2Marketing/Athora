@@ -16,7 +16,7 @@ import Container from 'components/Container';
 import FeaturedImage from 'components/FeaturedImage';
 import Breadcrumbs from 'components/Breadcrumbs';
 import Pagination from 'components/Pagination';
-import PostCard from 'components/PostCard';
+// import PostCard from 'components/PostCard';
 
 import styles from 'styles/pages/Page.module.scss';
 
@@ -109,7 +109,7 @@ export default function Page({ page, breadcrumbs, posts, pagination }) {
               {posts.map((post) => {
                 return (
                   <li key={post.slug}>
-                    <PostCard post={post} />
+                    {/* <PostCard post={post} /> */}
                   </li>
                 );
               })}
