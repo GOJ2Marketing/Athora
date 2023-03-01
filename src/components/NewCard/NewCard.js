@@ -8,10 +8,18 @@ const NewCard = (props) => {
   const hoverAnimation = {
     initial: {
       scale: 1,
+      transition: {
+        type: 'linear',
+        stiffness: 500,
+      },
     },
 
     hover: {
       scale: 0.5,
+    },
+    transition: {
+      type: 'linear',
+      stiffness: 500,
     },
   };
 
@@ -19,11 +27,19 @@ const NewCard = (props) => {
     initial: {
       y: '150%',
       opacity: 0,
+      transition: {
+        type: 'linear',
+        stiffness: 500,
+      },
     },
 
     hover: {
       y: '0%',
       opacity: 1,
+      transition: {
+        type: 'linear',
+        stiffness: 500,
+      },
     },
   };
 

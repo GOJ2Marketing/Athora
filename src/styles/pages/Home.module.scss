@@ -232,3 +232,12 @@
     margin-right: 50px;
   }
 }
+
+@media screen and (max-width: 980px) {
+  .contact {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 50vh;
+    height: 100vh;
+  }
+}

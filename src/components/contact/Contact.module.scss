@@ -1,0 +1,103 @@
+@import "styles/settings/__settings";
+
+.contactContainer {
+  background: $lightPurple;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 100px auto !important;
+
+  & .headerText {
+    text-align: center;
+    color: $cream;
+  }
+}
+
+.form {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & button {
+    font-family: "Sabon LT W05 Roman";
+    font-size: 1em;
+    color: $cream;
+    background: none;
+    border: 1px solid $cream;
+    border-radius: 10px;
+    padding: 15px 70px;
+    margin-top: 50px;
+    cursor: pointer;
+    transition: all 200ms linear;
+  }
+
+  & button:hover {
+    background-color: $cream;
+    color: $purple;
+  }
+}
+
+.formItem {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 15px;
+  & label {
+    font-size: 1.1em;
+    color: $cream;
+  }
+
+  & input {
+    all: unset;
+    border-bottom: 2px solid $cream;
+    color: $cream;
+  }
+}
+
+.label {
+  display: flex;
+  align-items: center;
+
+  & p {
+    font-size: 0.8em;
+    margin: 3px 0px 0 8px;
+    color: $cream;
+  }
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 200px;
+
+  & h3 {
+    color: $cream;
+    font-size: 1.2em;
+    font-weight: 500;
+    margin: 0;
+  }
+}
+
+.info {
+  align-self: flex-end;
+  text-align: right;
+  padding-top: 200px;
+
+  & p {
+    color: $cream;
+    font-size: 1em;
+    font-weight: 500;
+  }
+}
