@@ -10,6 +10,7 @@ import styles from 'styles/pages/Home.module.scss';
 import Button from 'components/Button';
 import BlogSlider from 'components/BlogSlider';
 import NewCardContainer from 'components/NewCardContainer';
+import ContactForm from 'components/contact';
 
 export default function Home({ posts }) {
   const { metadata = {} } = useSite();
@@ -85,8 +86,16 @@ export default function Home({ posts }) {
       </div>
 
       <div className={styles.contact}>
-        <div className={styles.formContainer}></div>
-        <div className={styles.mapContainer}></div>
+        <ContactForm />
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2979.3019218512113!2d-86.23792718383922!3d41.692417484991296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8816cd677cda81df%3A0xf43f7512b37515e4!2s1251%20N%20Eddy%20St%2C%20South%20Bend%2C%20IN%2046617!5e0!3m2!1sen!2sus!4v1677696593656!5m2!1sen!2sus"
+          width="100%"
+          height="100%"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
 
       <BlogSlider posts={posts} />
