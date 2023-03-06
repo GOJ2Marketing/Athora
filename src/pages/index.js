@@ -96,7 +96,7 @@ export default function Home({ posts }) {
 
 export async function getStaticProps() {
   try {
-    const res = await fetch('https://athorastg.wpengine.com/wp-json/wp/v2/posts?per_page=10');
+    const res = await fetch(process.env.REST_ALL_POSTS);
     console.log('Response status:', res.status);
     const posts = await res.json();
     console.log('FAQs data:', posts);
