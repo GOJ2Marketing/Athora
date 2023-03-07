@@ -11,6 +11,7 @@ import Section from 'components/Section';
 import styles from './Nav.module.scss';
 import NavListItem from 'components/NavListItem';
 import Container from 'components/Container';
+import Cookies from 'js-cookie';
 
 const Nav = () => {
   const { menus } = useSite();
@@ -88,6 +89,25 @@ const Nav = () => {
     },
   };
 
+  const lastIndex = navigation.length - 1;
+
+  // Check if user is logged in
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    // Check if the login cookie exists
+    const loginCookie = Cookies.get('access_token');
+
+    if (loginCookie) {
+      setIsLoggedIn(true);
+    }
+  }, []);
+
+  const accountText = {
+    label: isLoggedIn ? 'My Account' : 'Login',
+    path: isLoggedIn ? '/account' : '/login',
+  };
+
   return (
     <>
       <motion.ul
@@ -108,6 +128,13 @@ const Nav = () => {
             </motion.li>
           );
         })}
+        <motion.li
+          style={{ opacity: isOpen ? '1' : '0', transition: 'opacity 0.4s ease-in-out' }}
+          animate={{ opacity: isOpen ? '1' : '0' }}
+          transition={{ duration: 0.4, ease: 'easeInOut', delay: isOpen ? lastIndex * 0.2 + 0.2 : 0 }}
+        >
+          <NavListItem className={styles.navSubMenu} item={accountText} />
+        </motion.li>
       </motion.ul>
 
       <motion.nav

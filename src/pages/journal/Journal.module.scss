@@ -14,11 +14,16 @@
     padding-top: 50px;
 
     & .post {
-      max-width: 44%;
+      width: 44%;
       margin-bottom: 6%;
+      flex-grow: 1;
 
       &:nth-child(2n + 1) {
         margin-right: 6%;
+      }
+
+      &:last-child {
+        margin-right: 0;
       }
 
       & .titleWrap {
