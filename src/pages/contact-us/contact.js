@@ -4,7 +4,6 @@ import { WebsiteJsonLd } from 'lib/json-ld';
 import ContactForm from 'components/Contact';
 
 import Style from './Contact.module.scss';
-import WordPressLogin from 'components/WordPressLogin';
 
 const Contact = () => {
   return (
@@ -61,7 +60,6 @@ const Contact = () => {
               </li>
             </ol>
           </div>
-          <WordPressLogin />
         </Container>
       </div>
     </Layout>

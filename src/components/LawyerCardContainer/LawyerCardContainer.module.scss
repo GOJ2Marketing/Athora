@@ -3,9 +3,11 @@
 .cardContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  height: 70vh;
 
   @media (max-width: 1000px) {
     display: block;
+    height: auto;
   }
 }
 
