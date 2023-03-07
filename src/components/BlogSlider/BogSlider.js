@@ -39,7 +39,6 @@ const BlogSlider = ({ posts }) => {
         >
           <SplideTrack>
             {posts.map((post) => {
-              console.log(post);
               return (
                 <SplideSlide
                   className={styles.post}

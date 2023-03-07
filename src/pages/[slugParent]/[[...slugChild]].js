@@ -15,12 +15,11 @@ import Section from 'components/Section';
 import Container from 'components/Container';
 import FeaturedImage from 'components/FeaturedImage';
 import Breadcrumbs from 'components/Breadcrumbs';
-// import Pagination from 'components/Pagination';
-// import PostCard from 'components/PostCard';
 
 import styles from 'styles/pages/Page.module.scss';
+import BlogSlider from 'components/BlogSlider';
 
-export default function Page({ page, breadcrumbs, }) {
+export default function Page({ page, breadcrumbs, posts }) {
   const { title, metaTitle, description, slug, content, featuredImage, children } = page;
 
   const { metadata: siteMetadata = {} } = useSite();
@@ -102,6 +101,11 @@ export default function Page({ page, breadcrumbs, }) {
           </Section>
         )}
 
+        <Section>
+            <h2 className="sr-only">Posts</h2>
+            <BlogSlider posts={posts}/>
+        </Section>
+
       </Content>
     </Layout>
   );
@@ -112,6 +116,8 @@ export async function getStaticProps({ params = {} } = {}) {
 
   // We can use the URI to look up our page and subsequently its ID, so
   // we can first contruct our URI from the page params
+
+  
 
   let pageUri = `/${slugParent}/`;
 
@@ -140,14 +146,22 @@ export async function getStaticProps({ params = {} } = {}) {
     queryIncludes: 'index',
   });
 
+    const res = await fetch('https://athorastg.wpengine.com/wp-json/wp/v2/posts?per_page=10');
+    console.log('Response status:', res.status);
+    const posts = await res.json();
+    console.log('FAQs data:', posts);
+
   const breadcrumbs = getBreadcrumbsByUri(pageUri, pages);
 
   return {
     props: {
       page,
       breadcrumbs,
+      posts
     },
   };
+
+  
 }
 
 export async function getStaticPaths() {
