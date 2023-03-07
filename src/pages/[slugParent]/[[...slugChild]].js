@@ -15,12 +15,12 @@ import Section from 'components/Section';
 import Container from 'components/Container';
 import FeaturedImage from 'components/FeaturedImage';
 import Breadcrumbs from 'components/Breadcrumbs';
-import Pagination from 'components/Pagination';
+// import Pagination from 'components/Pagination';
 // import PostCard from 'components/PostCard';
 
 import styles from 'styles/pages/Page.module.scss';
 
-export default function Page({ page, breadcrumbs, posts, pagination }) {
+export default function Page({ page, breadcrumbs, }) {
   const { title, metaTitle, description, slug, content, featuredImage, children } = page;
 
   const { metadata: siteMetadata = {} } = useSite();
@@ -101,29 +101,6 @@ export default function Page({ page, breadcrumbs, posts, pagination }) {
             </Container>
           </Section>
         )}
-
-        <Section>
-          <Container>
-            <h2 className="sr-only">Posts</h2>
-            <ul className={styles.posts}>
-              {posts.map((post) => {
-                return (
-                  <li key={post.slug}>
-                    {/* <PostCard post={post} /> */}
-                  </li>
-                );
-              })}
-            </ul>
-            {pagination && (
-              <Pagination
-                addCanonical={false}
-                currentPage={pagination?.currentPage}
-                pagesCount={pagination?.pagesCount}
-                basePath={pagination?.basePath}
-              />
-            )}
-          </Container>
-        </Section>
 
       </Content>
     </Layout>

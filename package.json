@@ -24,6 +24,7 @@
     "@radix-ui/react-accordion": "^1.1.0",
     "@radix-ui/react-tabs": "^1.0.2",
     "@splidejs/react-splide": "^0.7.12",
+    "@wordpress/html-entities": "^3.28.0",
     "date-fns": "^2.29.3",
     "dotenv": "^16.0.3",
     "framer-motion": "^9.0.2",
@@ -43,6 +44,7 @@
     "react-icons": "^4.7.1",
     "rss": "^1.2.2",
     "sass": "^1.57.1",
+    "string-strip-html": "^13.2.0",
     "style.css": "^1.0.3"
   },
   "devDependencies": {
