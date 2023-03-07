@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import Section from 'components/Section';
 import Container from 'components/Container';
 import Layout from 'components/Layout';
+import WordPressLogout from 'components/WordPressLogout';
 
 const Account = () => {
   const [userData, setUserData] = useState(null);
@@ -75,6 +76,7 @@ const Account = () => {
             <div>
               <h1>{userData.name}</h1>
               <p>Email: {userData.email}</p>
+              <WordPressLogout />
               <h2>Files</h2>
               {userFiles.length > 0 ? (
                 <ul>
