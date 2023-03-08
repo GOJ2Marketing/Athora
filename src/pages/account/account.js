@@ -1,14 +1,18 @@
 import { useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
 import { useRouter } from 'next/router';
-import Section from 'components/Section';
 import Container from 'components/Container';
 import Layout from 'components/Layout';
 import WordPressLogout from 'components/WordPressLogout';
+import Link from 'next/link';
+import * as Switch from '@radix-ui/react-switch';
+
+import Style from './Account.module.scss';
 
 const Account = () => {
   const [userData, setUserData] = useState(null);
   const [userFiles, setUserFiles] = useState([]);
+  const [checked, setChecked] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
@@ -70,13 +74,34 @@ const Account = () => {
 
   return (
     <Layout>
-      <Section>
-        <Container>
-          {userData ? (
-            <div>
-              <h1>{userData.name}</h1>
-              <p>Email: {userData.email}</p>
-              <WordPressLogout />
+      {userData ? (
+        <div>
+          <div className={Style.headerContainer}>
+            <Container className={Style.headerContent}>
+              <h1>Hello, {userData.name}</h1>
+              <div className={Style.info}>
+                <p>Email: {userData.email}</p>
+                <WordPressLogout />
+              </div>
+            </Container>
+          </div>
+          <div className={Style.switchContainer}>
+            <Container className={Style.switchContent}>
+              <Switch.Root className={Style.switchRoot} onCheckedChange={setChecked}>
+                <div className={Style.tabContainer}>
+                  <div className={Style.tabTrigger} value="tab1">
+                    <h3 className={Style.documents}>Documents</h3>
+                  </div>
+                  <div className={Style.tabTrigger} value="tab2">
+                    <h3 className={Style.billing}>Billing</h3>
+                  </div>
+                </div>
+                <Switch.Thumb className={Style.switchThumb} />
+              </Switch.Root>
+            </Container>
+          </div>
+          <div className={checked === false ? Style.show : Style.hide} value="tab1">
+            <Container>
               <h2>Files</h2>
               {userFiles.length > 0 ? (
                 <ul>
@@ -89,12 +114,20 @@ const Account = () => {
               ) : (
                 <p>No files found.</p>
               )}
-            </div>
-          ) : (
-            <p>Loading user data...</p>
-          )}
-        </Container>
-      </Section>
+            </Container>
+          </div>
+          <div className={checked === true ? Style.show : Style.hide} value="tab2">
+            <Container>
+              <div className={Style.billingLinks}>
+                <Link href="#"> Make a payment</Link>
+                <Link href="/contact-us">Contact us</Link>
+              </div>
+            </Container>
+          </div>
+        </div>
+      ) : (
+        <p>Loading user data...</p>
+      )}
     </Layout>
   );
 };

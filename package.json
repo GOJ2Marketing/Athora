@@ -22,6 +22,7 @@
   "dependencies": {
     "@apollo/client": "^3.7.4",
     "@radix-ui/react-accordion": "^1.1.0",
+    "@radix-ui/react-switch": "^1.0.2",
     "@radix-ui/react-tabs": "^1.0.2",
     "@splidejs/react-splide": "^0.7.12",
     "@wordpress/html-entities": "^3.28.0",
