@@ -1,6 +1,8 @@
 import { useRouter } from 'next/router';
 import Cookies from 'js-cookie';
 
+import Style from './WordPressLogout.module.scss';
+
 const WordPressLogout = () => {
   const router = useRouter();
 
@@ -9,7 +11,11 @@ const WordPressLogout = () => {
     router.push('/'); // redirect to home page or any other desired page
   };
 
-  return <button onClick={handleLogout}>Log Out</button>;
+  return (
+    <button onClick={handleLogout} className={Style.button}>
+      Log Out
+    </button>
+  );
 };
 
 export default WordPressLogout;

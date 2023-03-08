@@ -1,1 +1,177 @@
 @import "styles/settings/__settings";
+
+.headerContainer {
+  background-color: $purple;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 15% 0 30px 0;
+}
+
+.headerContent {
+  display: flex;
+  flex-direction: column;
+
+  & h1 {
+    color: $cream;
+    font-size: 5em;
+    font-weight: 500;
+    border-top: 5px solid $cream;
+  }
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+
+  & p {
+    color: $cream;
+    font-size: 1.1em;
+    font-weight: 500;
+  }
+}
+
+.switchContainer {
+  background-color: #fff;
+  padding: 100px 0;
+}
+
+.switchContent {
+  display: flex;
+  justify-content: center;
+
+  & button {
+    background-color: none;
+    border: none;
+  }
+}
+
+.switchRoot {
+  width: 526px;
+  height: 56px;
+  background-color: $purple;
+  border-radius: 9999px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & h3 {
+    z-index: 1;
+    font-size: 1.8em;
+    font-weight: 400;
+  }
+}
+
+.tabContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+  align-self: center;
+  font-family: "Sabon LT W05 Roman";
+
+  & h3 {
+    transition: all 200ms linear;
+  }
+}
+
+.switchRoot[data-state="checked"] {
+  & .documents {
+    color: $cream;
+    cursor: pointer;
+  }
+
+  & .billing {
+    color: $purple;
+    cursor: unset;
+  }
+}
+
+.switchRoot[data-state="unchecked"] {
+  & .documents {
+    color: $purple;
+    cursor: unset;
+  }
+
+  & .billing {
+    color: $cream;
+    cursor: pointer;
+  }
+}
+
+.switchThumb {
+  display: block;
+  position: absolute;
+  width: 263px;
+  height: 54px;
+  background-color: white;
+  border-radius: 9999px;
+  will-change: transform;
+  transform: translateX(-49.5%);
+  transition: all 200ms linear;
+}
+
+.switchThumb[data-state="checked"] {
+  transform: translateX(49.5%);
+}
+
+.tabTrigger {
+  background-color: transparent;
+  z-index: 1;
+
+  &:nth-child(2) {
+    margin-right: 20px;
+  }
+}
+
+.billingLinks {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5em;
+
+  & a {
+    color: $purple;
+    border-top: 2.5px solid $purple;
+    margin-bottom: 50px;
+    cursor: pointer;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+  background-color: #fff;
+  padding: 50px 0;
+}
+
+@media screen and (max-width: 1080px) {
+  .headerContainer {
+    padding: 25% 0 30px 0;
+
+    & h1 {
+      font-size: 2.8em;
+    }
+  }
+
+  .info {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .headerContainer {
+    padding: 55% 0 30px 0;
+
+    & h1 {
+      font-size: 2em;
+      padding-bottom: 20px;
+    }
+  }
+}
