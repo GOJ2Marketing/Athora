@@ -44,10 +44,10 @@ const Account = () => {
       }
     };
 
-    // Make an API request to fetch the user's media library files from the WordPress API
+    // Make an API request to fetch the Account post data from the WordPress API
     const fetchUserFiles = async () => {
       try {
-        const response = await fetch(`https://athorastg.wpengine.com/wp-json/wp/v2/media?author=${userData.id}`, {
+        const response = await fetch(`https://athorastg.wpengine.com/wp-json/wp/v2/account?slug=${userData.email}`, {
           headers: {
             Authorization: `Bearer ${accessToken}`,
           },
@@ -55,7 +55,21 @@ const Account = () => {
 
         if (response.ok) {
           const data = await response.json();
-          setUserFiles(data);
+          const fileIds = [data[0].acf.files]; // Assumes that the custom field is called "files"
+          console.log(fileIds);
+          const files = await Promise.all(
+            fileIds.map(async (id) => {
+              const fileResponse = await fetch(`https://athorastg.wpengine.com/wp-json/wp/v2/media/${id}`, {
+                headers: {
+                  Authorization: `Bearer ${accessToken}`,
+                },
+              });
+              console.log('id', id);
+              const fileData = await fileResponse.json();
+              return fileData;
+            })
+          );
+          setUserFiles(files);
         } else {
           console.error(`Error fetching user files: ${response.statusText}`);
         }
@@ -107,7 +121,7 @@ const Account = () => {
                 <ul>
                   {userFiles.map((file) => (
                     <li key={file.id}>
-                      <a href={file.source_url}>{file.title.rendered}</a>
+                      <a href={file.guid.rendered}>{file.title.rendered}</a>
                     </li>
                   ))}
                 </ul>
