@@ -48,3 +48,15 @@
     background-color: $purple;
   }
 }
+
+@media screen and (max-width: 1540px) {
+  .progress {
+    margin: 0 15%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .splideSection {
+    width: 100vw;
+  }
+}

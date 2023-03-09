@@ -38,13 +38,13 @@ const FAQs = ({ faqs }) => {
                     className={selectedCategory === 'Estate Planning and Administration' ? styles.active : ''}
                     onClick={() => setSelectedCategory('Estate Planning and Administration')}
                   >
-                    Estate Planning & Litigation
+                    Estate Planning & Administration
                   </button>
                   <button
                     className={selectedCategory === 'Litigation' ? styles.active : ''}
                     onClick={() => setSelectedCategory('Litigation')}
                   >
-                    Litigation
+                    Commercial Litigation
                   </button>
                 </div>
 
