@@ -9,7 +9,7 @@ const BlogSlider = ({ posts }) => {
   const [progressVisibility, setProgressVisibility] = useState(true);
 
   return (
-    <Section>
+    <Section className={styles.splideSection}>
       <h2 className="sr-only">Posts</h2>
       <div className={styles.splideWrap}>
         <Splide

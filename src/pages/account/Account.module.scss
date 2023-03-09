@@ -165,6 +165,38 @@
   }
 }
 
+@media screen and (max-width: 705px) {
+  .switchRoot {
+    width: 263px;
+    height: 56px;
+
+    & h3 {
+      font-size: 1.3em;
+    }
+  }
+
+  .switchThumb {
+    width: 131px;
+  }
+
+  .tabTrigger {
+    &:nth-child(1) {
+      transform: translateX(-10px);
+    }
+    &:nth-child(2) {
+      margin-right: 0px;
+    }
+  }
+
+  .switchContainer {
+    padding: 50px 0;
+  }
+
+  .show {
+    padding: 10px;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .headerContainer {
     padding: 55% 0 30px 0;

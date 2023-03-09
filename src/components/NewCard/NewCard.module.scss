@@ -35,7 +35,8 @@
 
 .title {
   color: $cream;
-  writing-mode: sideways-lr;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
   line-height: 1;
   font-size: clamp(26px, 5vw, 65px);
   text-align: right;

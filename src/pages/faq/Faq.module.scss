@@ -139,3 +139,9 @@
 .accordionItem[data-state="open"] .vert {
   transform: rotate(180deg);
 }
+
+@media screen and (max-width: 750px) {
+  .filterButtons {
+    flex-direction: column;
+  }
+}
