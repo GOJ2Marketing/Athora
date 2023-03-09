@@ -1,7 +1,7 @@
 import Container from 'components/Container';
 import Layout from 'components/Layout';
 import { WebsiteJsonLd } from 'lib/json-ld';
-import ContactForm from 'components/Contact';
+import ContactForm from 'components/contact';
 
 import Style from './Contact.module.scss';
 
