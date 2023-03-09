@@ -173,7 +173,6 @@
 .contact {
   display: grid;
   grid-template-columns: 60% auto;
-  height: 80vh;
 }
 
 .formContainer {
@@ -236,17 +235,20 @@
 @media screen and (max-width: 980px) {
   .contact {
     display: grid;
-    grid-template-columns: 100vw;
-    grid-template-rows: 50vh;
-    height: 100vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 50%;
+
+    & iframe {
+      height: 550px;
+    }
   }
 }
 
-@media screen and (max-width: 400px) {
-  .contact {
-    display: grid;
-    grid-template-columns: 100vw;
-    grid-template-rows: 90vh;
-    height: 180vh;
-  }
-}
+// @media screen and (max-width: 400px) {
+//   .contact {
+//     display: grid;
+//     grid-template-columns: 100vw;
+//     grid-template-rows: 90vh;
+//     height: 180vh;
+//   }
+// }
