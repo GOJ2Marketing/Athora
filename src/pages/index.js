@@ -10,7 +10,7 @@ import styles from 'styles/pages/Home.module.scss';
 import Button from 'components/Button';
 import BlogSlider from 'components/BlogSlider';
 import NewCardContainer from 'components/NewCardContainer';
-import ContactForm from 'components/contact';
+import ContactForm from 'components/Contact';
 
 export default function Home({ posts }) {
   const { metadata = {} } = useSite();
