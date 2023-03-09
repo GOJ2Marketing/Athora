@@ -59,7 +59,7 @@ const Nav = () => {
 
   useEffect(() => {
     const navScroll = () => {
-      if (scrollY.current <= 200) {
+      if (scrollY.current <= 100) {
         setNavState({ scrollState: 'nearTop' });
       } else if (scrollY.current > prevY.current && !isOpen) {
         setNavState({ scrollState: 'scrollingDown' });

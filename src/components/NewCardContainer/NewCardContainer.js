@@ -45,12 +45,12 @@ const Container = ({ className }) => {
   return (
     <motion.div
       className={styles.cardContainer}
-      variants={container}
+      variants={typeof window !== 'undefined' && window.innerWidth > 768 ? container : {}}
       initial="hidden"
       whileInView={'show'}
       viewport={{ amount: 'some', margin: '-250px', once: true }}
     >
-      <motion.div variants={item}>
+      <motion.div variants={typeof window !== 'undefined' && window.innerWidth > 768 ? item : {}}>
         <NewCard
           title={'Business\nLaw'}
           source={'/businessLaw.png'}
@@ -60,7 +60,7 @@ const Container = ({ className }) => {
           buttonText="Read More"
         />
       </motion.div>
-      <motion.div variants={item}>
+      <motion.div variants={typeof window !== 'undefined' && window.innerWidth > 768 ? item : {}}>
         <NewCard
           title={'Estate Planning &\nAdministration'}
           source={'/estateLaw.png'}
@@ -69,7 +69,7 @@ const Container = ({ className }) => {
           buttonText="Read More"
         />
       </motion.div>
-      <motion.div variants={item}>
+      <motion.div variants={typeof window !== 'undefined' && window.innerWidth > 768 ? item : {}}>
         <NewCard
           title={'Commerecial\nLitigation'}
           source={'/litigationLaw.png'}

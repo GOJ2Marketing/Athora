@@ -52,11 +52,17 @@ const NewCard = (props) => {
     >
       <div className={styles.overlay}></div>
 
-      <motion.div variants={hoverAnimation} className={styles.titleWrapper}>
+      <motion.div
+        variants={typeof window !== 'undefined' && window.innerWidth > 768 ? hoverAnimation : {}}
+        className={styles.titleWrapper}
+      >
         <div className={styles.title} dangerouslySetInnerHTML={{ __html: title.replace(/\n/g, '<br>') }}></div>
       </motion.div>
 
-      <motion.div variants={descAnime} className={styles.descWrapper}>
+      <motion.div
+        variants={typeof window !== 'undefined' && window.innerWidth > 768 ? descAnime : {}}
+        className={styles.descWrapper}
+      >
         <div className={styles.desc}>{desc}</div>
         <NewButton href={href} buttonText={buttonText} />
       </motion.div>
