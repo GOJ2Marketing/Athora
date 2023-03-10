@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
-import styles from './navListItem.module.scss';
+import styles from './NavListItem.module.scss';
 
 const NavListItem = ({ className, item }) => {
   const nestedItems = (item.children || []).map((item) => {
