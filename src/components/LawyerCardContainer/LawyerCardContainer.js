@@ -45,12 +45,12 @@ const Container = ({ className }) => {
   return (
     <motion.div
       className={styles.cardContainer}
-      variants={container}
+      variants={typeof window !== 'undefined' && window.innerWidth > 768 ? container : {}}
       initial="hidden"
       whileInView={'show'}
       viewport={{ amount: 'some', margin: '-250px', once: true }}
     >
-      <motion.div variants={item}>
+      <motion.div variants={typeof window !== 'undefined' && window.innerWidth > 768 ? item : {}}>
         <NewCard
           title={'Jackie Sells\nHomann'}
           source={'/businessLaw.png'}
@@ -59,7 +59,7 @@ const Container = ({ className }) => {
           buttonText="View Profile"
         />
       </motion.div>
-      <motion.div variants={item}>
+      <motion.div variants={typeof window !== 'undefined' && window.innerWidth > 768 ? item : {}}>
         <NewCard
           title={'Janet G.\nHorvath'}
           source={'/estateLaw.png'}
@@ -68,7 +68,7 @@ const Container = ({ className }) => {
           buttonText="View Profile"
         />
       </motion.div>
-      <motion.div variants={item}>
+      <motion.div variants={typeof window !== 'undefined' && window.innerWidth > 768 ? item : {}}>
         <NewCard
           title={'Amanda\n N. Zaluckyj'}
           source={'/litigationLaw.png'}

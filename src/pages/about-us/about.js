@@ -27,7 +27,7 @@ export default function Home() {
             __html: description,
           }}
         /> */}
-        <h1>About Us</h1>
+        <h1 className={pageStyles.title}>About Us</h1>
         <h2 className={pageStyles.subTitle}>
           Athora Law Group was born out of the desire to forge a new path, by women who understand that your legal needs
           impact your life–personal and professional. Times are changing; you need a law group that can confidently lead

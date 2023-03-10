@@ -1,5 +1,8 @@
 @import "styles/settings/__settings";
 
+.title {
+  margin: 70px 0 !important;
+}
 .subTitle {
   color: $cream;
   font-size: 1em;
@@ -22,6 +25,10 @@
 // MEDIA QUERIES
 
 @media screen and (max-width: 635px) {
+  .subTitle {
+    font-size: 0.9em;
+  }
+
   .descContainer {
     & h2 {
       font-size: 1em;
