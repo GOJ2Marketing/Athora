@@ -217,3 +217,18 @@
     bottom: 6px;
   }
 }
+
+@media screen and (max-width: 700px) {
+  .menuWrapper {
+    &:hover {
+      & .line1 {
+        width: 100% !important;
+        left: 100% !important;
+      }
+
+      & .line2 {
+        width: 100% !important;
+      }
+    }
+  }
+}
